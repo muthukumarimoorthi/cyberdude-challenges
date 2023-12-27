@@ -1,7 +1,0 @@
-(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&n(s)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function n(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();const l=document.forms.register,c=l.elements.fullName,u=l.elements.mobileNumber,a=i=>{i.preventDefault();const o=new FormData(l),r=Object.fromEntries(o);c.value.length>2&&c.value.length<=22?console.log("Nice Name"):alert("Please enter your correct name!!!"),u.value.length<10||u.value.length>10?alert("Please enter your correct number!!! "):confirm("We will send all updates in your phone"),function(){const n=`
-      Customer Name : ${r.fullName}
-      Email ID      : ${r.email}
-      Mobile No     : ${r.mobileNumber}
-      Package        : ${r.packageMonths}
-      Disability    : ${r.yesOrNoRadio} 
-    `;console.log(n)}(),confirm(`Thank you ${r.fullName} for choosing us`)};l.addEventListener("submit",a);

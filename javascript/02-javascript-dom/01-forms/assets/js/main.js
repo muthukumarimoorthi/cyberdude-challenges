@@ -9,7 +9,7 @@ const handleSubmit = (event) => {
 
   const formData = new FormData(registerEl);
   const data = Object.fromEntries(formData);
-  // console.log(data);
+  console.log(data);
 
   // Name Validation
   if (elementsEl.value.length > 2 && elementsEl.value.length <= 22) {
@@ -29,9 +29,10 @@ const handleSubmit = (event) => {
   (function () {
     const customerInput = `
       Customer Name : ${data.fullName}
+      DOB           : ${data.date} ${data.month} ${data.year}
       Email ID      : ${data.email}
       Mobile No     : ${data.mobileNumber}
-      Package        : ${data.packageMonths}
+      Package       : ${data.packageMonths}
       Disability    : ${data.yesOrNoRadio} 
     `;
     console.log(customerInput);
