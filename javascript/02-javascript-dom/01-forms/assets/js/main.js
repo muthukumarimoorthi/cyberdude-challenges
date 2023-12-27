@@ -42,3 +42,7 @@ const handleSubmit = (event) => {
 };
 // Invoked Function
 registerEl.addEventListener("submit", handleSubmit);
+
+// *
+// !
+// 
