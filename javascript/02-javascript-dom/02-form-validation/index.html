@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body class="bg-blue">
-    <main class="relative">
-      <div class="relative">
-        <form id="applicationForm">
-          <div class="mx-auto max-w-md bg-slate-50 py-3 font-nunito">
+    <main>
+      <div>
+        <form id="applicationForm relative">
+          <div class="mx-auto max-w-md bg-slate-50 py-3 font-nunito relative">
             <!-- * GitHub and Linkedin div-->
             <div class="flex space-x-3 justify-center px-2 py-2">
-              <a href=""
+              <a href="https://www.linkedin.com/in/muthukumari-m-8a1415221/" class="hover:text-blue-600" target="_blank"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -30,7 +30,7 @@
                     d="M216 20H40a20 20 0 0 0-20 20v176a20 20 0 0 0 20 20h176a20 20 0 0 0 20-20V40a20 20 0 0 0-20-20m-4 192H44V44h168Zm-100-36v-52a12 12 0 0 1 21.43-7.41A40 40 0 0 1 192 152v24a12 12 0 0 1-24 0v-24a16 16 0 0 0-32 0v24a12 12 0 0 1-24 0m-16-52v52a12 12 0 0 1-24 0v-52a12 12 0 0 1 24 0M68 80a16 16 0 1 1 16 16a16 16 0 0 1-16-16"
                   /></svg
               ></a>
-              <a href=""
+              <a href="https://github.com/muthukumarimoorthi/cyberdude-challenges/tree/main/javascript/02-javascript-dom/02-form-validation" target="_blank" class="hover:text-gray-400"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -488,32 +488,112 @@
                 type="submit"
                 name="submitBtn"
                 id="submitBtn"
-                class="text-gray-50 bg-gradient-to-r w-full bg-blue-500 rounded px-14 py-2.5 text-center"
+                class="text-gray-50 hover:bg-blue-600 bg-gradient-to-r w-full bg-blue-500 rounded px-14 py-2.5 text-center"
               >
                 Register
               </button>
             </div>
           </div>
-        </form>
-        <!--  ! Form End-->
-        <!-- * Side Image One Div -->
-        <div class="absolute opacity-20 top-96 left-30 right-1">
-          <img
-            src="./assets/properties/laptop with open browser window.png"
-            height="500px"
-            width="500px"
-            alt="design.png"
-          />
-        </div>
-      </div>
-      <!-- * Side Image Two Div -->
-      <div class="absolute bottom-0 top-20 left-52">
+          <!-- * Side Image One Div -->
+          <div class="absolute opacity-20 top-96 left-30 right-1">
+            <img
+              src="./assets/properties/laptop with open browser window.png"
+              height="500px"
+              width="500px"
+              alt="design.png"
+            />
+          </div>
+          <!-- * Side Image Two Div -->
+      <div class="absolute bottom-0 top-64 -z-50 left-80">
         <img
           src="./assets/properties/Woman in blue suit leaning on the phone with open online shopping.png"
-          width="350px"
-          height="350px"
+          width="500px"
+          height="500px"
           alt="desingn.png"
         />
+      </div>
+        </form>
+        <!--  ! Form End-->
+      </div>
+      
+      <!-- ! Table Section Start -->
+      <div
+        class="bg-white rounded p-5 max-w-6xl mx-auto mt-10 hidden"
+        id="approvalRequest"
+      >
+        <div class="max-w-7xl bg-blue-400 mx-auto my-16 rounded-md px-5">
+          <div class="flex pt-8 space-x-2">
+            <h1 class="font-semibold text-3xl text-[#2B3252]">
+              Approval Request
+            </h1>
+            <span class="text-[#EF5455]"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="currentColor"
+                  d="M22 22v6H6V4h10V2H6a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6Z"
+                />
+                <path
+                  fill="currentColor"
+                  d="m29.54 5.76l-3.3-3.3a1.6 1.6 0 0 0-2.24 0l-14 14V22h5.53l14-14a1.6 1.6 0 0 0 0-2.24ZM14.7 20H12v-2.7l9.44-9.45l2.71 2.71ZM25.56 9.15l-2.71-2.71l2.27-2.27l2.71 2.71Z"
+                /></svg
+            ></span>
+          </div>
+          <!-- Table Div -->
+          <div class="py-8">
+            <table
+              class="table-auto text-sm w-full text-white bg-[#2B3252] rounded-sm border-2 border-gray-200 text-center"
+            >
+              <!-- Heading Row -->
+              <thead>
+                <tr class="text-center">
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Customer Name
+                  </th>
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Mobile Number
+                  </th>
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Email ID
+                  </th>
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Address
+                  </th>
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Date of birth
+                  </th>
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Marital Status
+                  </th>
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Aadhar Card Number
+                  </th>
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Type of Employment
+                  </th>
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Loan Purpose
+                  </th>
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Monthly Income
+                  </th>
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Ongoing Loan
+                  </th>
+                  <th class="p-2 font-base border-2 border-gray-200">
+                    Approval Section
+                  </th>
+                </tr>
+              </thead>
+              <!-- Name Row -->
+              <tbody id="personDataTable"></tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </main>
     <script type="module" src="./assets/js/main.js"></script>

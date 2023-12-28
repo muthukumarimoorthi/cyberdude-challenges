@@ -7,6 +7,8 @@ const formEl = document.getElementById("applicationForm"); // * Get form element
 const validateForm = new JustValidate(formEl);
 console.log(validateForm);
 
+const localKey = "personData";
+
 // * Name Validation
 validateForm.addField(
   "#fullName",
@@ -56,10 +58,7 @@ validateForm.addField(
 // * Date validation
 validateForm.addField(
   "#dOB",
-  [
-    { rule: "required", errorMessage: "Date of birth is required" },
-    { rule: "number" },
-  ],
+  [{ rule: "required", errorMessage: "Date of birth is required" }],
   { errorLabelCssClass: ["form-error"] }
 );
 // * Marital status validation
@@ -79,7 +78,10 @@ validateForm.addField(
 validateForm.addField(
   "#aadharCardNumber",
   [
-    { rule: "required", errorMessage: "Aadhar number is required Ex: 1234 5698 7321" },
+    {
+      rule: "required",
+      errorMessage: "Aadhar number is required Ex: 1234 5698 7321",
+    },
     { rule: "number" },
     { rule: "minLength", value: 12 },
     { rule: "maxLength", value: 12 },
@@ -89,34 +91,247 @@ validateForm.addField(
   }
 );
 // * Type of employment validation
-validateForm.addField("#typeOfEmployment", [{ rule: "required",  errorMessage: "Please select your employment type, as required"}], {
-  errorLabelCssClass: ["form-error"],
-});
+validateForm.addField(
+  "#typeOfEmployment",
+  [
+    {
+      rule: "required",
+      errorMessage: "Please select your employment type, as required",
+    },
+  ],
+  {
+    errorLabelCssClass: ["form-error"],
+  }
+);
 // * Loan of purpose validation
-validateForm.addField("#loanPurpose", [{ rule: "required", errorMessage: "Please select your loan purpose, as required" }], {
-  errorLabelCssClass: ["form-error"],
-});
+validateForm.addField(
+  "#loanPurpose",
+  [
+    {
+      rule: "required",
+      errorMessage: "Please select your loan purpose, as required",
+    },
+  ],
+  {
+    errorLabelCssClass: ["form-error"],
+  }
+);
 // * Monthly income validation
-validateForm.addField("#monthlyIncome", [{ rule: "required", errorMessage: "Your monthly income, is required" }, 
-{rule:"number"},
-{rule:"minLength", value: 4},
-{rule:"maxLength", value:7}], {
-  errorLabelCssClass: ["form-error"],
-});
+validateForm.addField(
+  "#monthlyIncome",
+  [
+    { rule: "required", errorMessage: "Your monthly income, is required" },
+    { rule: "number" },
+    { rule: "minLength", value: 5 },
+    { rule: "maxLength", value: 7 },
+  ],
+  {
+    errorLabelCssClass: ["form-error"],
+  }
+);
 // * Ongoing loan validation
 validateForm.addField("#ongoingLoan", [{ rule: "required" }], {
   errorLabelCssClass: ["form-error"],
 });
 // * Checkbox validation
 validateForm.addField(
-    "#checkBox",
-    [
-      {
-        rule: "required",
-        errorMessage: "You need to accept the terms and conditions",
-      },
-    ],
+  "#checkBox",
+  [
     {
-      errorLabelCssClass: ["form-error"],
+      rule: "required",
+      errorMessage: "You need to accept the terms and conditions",
+    },
+  ],
+  {
+    errorLabelCssClass: ["form-error"],
+  }
+);
+// ! Validation End
+
+// * Get form datas in formdata object
+validateForm.onSuccess(() => {
+  const formData = new FormData(formEl);
+  const formValueObj = Object.fromEntries(formData.entries());
+
+  const existingData = localStorage.getItem("personData");
+  const existingArray = JSON.parse(existingData);
+//   console.log(existingArray);
+
+  const newData = [];
+
+  if (existingArray) {
+    existingArray.push(formValueObj);
+
+    localStorage.setItem(localKey, JSON.stringify(existingArray));
+  } else {
+    newData.push(formValueObj);
+
+    localStorage.setItem(localKey, JSON.stringify(newData));
+  }
+
+  alert("Your loan application submitted successfully!");
+  getAllPersonsDatas();
+  formEl.reset();
+});
+
+function getAllPersonsDatas() {
+  const personData = localStorage.getItem(localKey);
+
+  const personDataArr = JSON.parse(personData);
+
+  const personCardEl = document.querySelector("#approvalRequest");
+  console.log(personCardEl);
+
+  if (personDataArr && personDataArr.length > 0) {
+    personCardEl.classList.remove("hidden");
+
+    const tableEl = document.querySelector("#personDataTable");
+    tableEl.innerHTML = "";
+
+    const newFinalValue = [];
+
+    personDataArr.map((personData) => {
+      const trEl = document.createElement("tr");
+      const tdNameEl = document.createElement("td");
+      const tdMobileEl = document.createElement("td");
+      const tdEmailEl = document.createElement("td");
+      const tdAddressEl = document.createElement("td");
+      const tdDOBEl = document.createElement("td");
+      const tdMaritalStatusEl = document.createElement("td");
+      const tdAadharEl = document.createElement("td");
+      const tdEmploymentEl = document.createElement("td");
+      const tdLoanPurposeEl = document.createElement("td");
+      const tdIncomeEl = document.createElement("td");
+      const tdOngoingLoanEl = document.createElement("td");
+      const approvalSectionEl =document.createElement("td")
+      const approvalBtnEl = document.createElement("button");
+
+      tdNameEl.classList.add("px-2", "font-thin", "border", "border-gray-200");
+      tdNameEl.textContent = personData.fullName;
+
+      tdMobileEl.classList.add(
+        "px-2",
+        "font-thin",
+        "border",
+        "border-gray-200"
+      );
+      tdMobileEl.textContent = personData.mobileNumber;
+
+      tdEmailEl.classList.add("px-2", "font-thin", "border", "border-gray-200");
+      tdEmailEl.textContent = personData.email;
+
+      tdAddressEl.classList.add(
+        "px-2",
+        "font-thin",
+        "border",
+        "border-gray-200"
+      );
+      tdAddressEl.textContent = personData.address;
+
+      tdDOBEl.classList.add("px-2", "font-thin", "border", "border-gray-200");
+      tdDOBEl.textContent = personData.dOB;
+
+      tdMaritalStatusEl.classList.add("px-2", "font-thin", "border", "border-gray-200");
+      tdMaritalStatusEl.textContent = personData.maritalStatus;
+
+      tdAadharEl.classList.add(
+        "px-2",
+        "font-thin",
+        "border",
+        "border-gray-200"
+      );
+      tdAadharEl.textContent = personData.aadharCardNumber;
+
+      tdEmploymentEl.classList.add(
+        "px-2",
+        "font-thin",
+        "border",
+        "border-gray-200"
+      );
+      tdEmploymentEl.textContent = personData.typeOfEmployment;
+
+      tdLoanPurposeEl.classList.add(
+        "px-2",
+        "font-thin",
+        "border",
+        "border-gray-200"
+      );
+      tdLoanPurposeEl.textContent = personData.loanPurpose;
+
+      tdIncomeEl.classList.add(
+        "px-2",
+        "font-thin",
+        "border",
+        "border-gray-200"
+      );
+      tdIncomeEl.textContent = personData.monthlyIncome;
+
+      tdOngoingLoanEl.classList.add(
+        "px-2",
+        "font-thin",
+        "border",
+        "border-gray-200"
+      );
+      tdOngoingLoanEl.textContent = personData.ongoingLoan;
+      approvalSectionEl.classList.add(
+        "px-2",
+        "font-thin",
+        "border",
+        "border-gray-200"
+      );
+      approvalSectionEl.textContent = personData.ongoingLoan;
+
+      approvalBtnEl.className =
+        "px-2 py-1 rounded-md bg-red-600 hover:bg-red-700 text-white text-xs";
+      approvalBtnEl.textContent = "Approval";
+
+      approvalBtnEl.addEventListener("click", (e) => {
+        approvalRequest(personData);
+      });
+
+      tdOngoingLoanEl.classList.add("px-2", "py-1", "border");
+      tdOngoingLoanEl.append(approvalBtnEl);
+
+      trEl.append(
+        tdNameEl,
+        tdMobileEl,
+        tdEmailEl,
+        tdAddressEl,
+        tdDOBEl,
+        tdMaritalStatusEl,
+        tdAadharEl,
+        tdEmploymentEl,
+        tdLoanPurposeEl,
+        tdIncomeEl,
+        tdOngoingLoanEl,
+        approvalBtnEl
+      );
+
+      newFinalValue.push(trEl);
+      console.log(trEl);
+    });
+    newFinalValue.forEach((el) => tableEl.append(el));
+  }
+}
+
+function approvalRequest(personDataTable) {
+    const confirmation = confirm(
+      `Do you want to approval '${personDataTable["fullName"]}' loan request?`
+    );
+  
+    if (confirmation) {
+      const existingData = localStorage.getItem(localKey);
+  
+      const personDataObj = JSON.parse(existingData);
+  
+      const otherRecords = personDataObj.filter(
+        (approvalReq) => approvalReq.aadharCardNumber != personDataTable["aadharCardNumber"]
+      );
+  
+      localStorage.setItem(localKey, JSON.stringify(otherRecords));
+  
+      getAllPersonsDatas();
     }
-  );
+  }
+  
+  getAllPersonsDatas();
