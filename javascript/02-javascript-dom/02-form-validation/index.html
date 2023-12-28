@@ -11,10 +11,10 @@
     <title>Online Loan Application</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body class="bg-blue ">
-    <div class="relative">
+  <body class="bg-blue">
+    <main class="relative">
       <div class="relative">
-        <form action="">
+        <form id="applicationForm">
           <div class="mx-auto max-w-md bg-slate-50 py-3 font-nunito">
             <!-- * GitHub and Linkedin div-->
             <div class="flex space-x-3 justify-center px-2 py-2">
@@ -70,7 +70,12 @@
                 </div>
               </div>
               <div class="justify-center items-center">
-                <img src="./assets/properties/laptop and credit card.png" width="230" height="230" alt="computer image">
+                <img
+                  src="./assets/properties/laptop and credit card.png"
+                  width="230"
+                  height="230"
+                  alt="computer image"
+                />
               </div>
             </div>
             <!-- * Full Name input div -->
@@ -249,7 +254,10 @@
                       stroke-width="4"
                     >
                       <circle cx="25" cy="29" r="15" />
-                      <path fill="currentColor" d="m18 8l3-4h8.054L32 8l-7 6z" />
+                      <path
+                        fill="currentColor"
+                        d="m18 8l3-4h8.054L32 8l-7 6z"
+                      />
                     </g>
                   </svg>
                 </div>
@@ -261,7 +269,7 @@
                     class="bg-gray-50 outline-none text-sm focus:border-blue-300 w-full border-gray-300 border-b pl-9 py-1.5 focus:shadow-sm"
                     required
                   >
-                    <option selected>Marital Status</option>
+                    <option value="">Marital Status</option>
                     <option value="Single">Single</option>
                     <option value="Married">Married</option>
                     <option value="Divorced">Divorced</option>
@@ -274,7 +282,17 @@
             <div class="px-6">
               <div class="relative mb-6">
                 <div class="absolute text-gray-600 left-4 top-0.5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 576 512"><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80m-32-96a64 64 0 1 1 128 0a64 64 0 1 1-128 0m256-32h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16m0 64h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16m0 64h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="20"
+                    viewBox="0 0 576 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80m-32-96a64 64 0 1 1 128 0a64 64 0 1 1-128 0m256-32h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16m0 64h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16m0 64h128c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16"
+                    />
+                  </svg>
                 </div>
                 <div class="px-4">
                   <input
@@ -292,17 +310,27 @@
             <div class="px-6">
               <div class="relative mb-6">
                 <div class="absolute text-gray-600 left-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M4 21q-.825 0-1.412-.587T2 19V8q0-.825.588-1.412T4 6h4V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v11q0 .825-.587 1.413T20 21zm6-15h4V4h-4z"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M4 21q-.825 0-1.412-.587T2 19V8q0-.825.588-1.412T4 6h4V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v11q0 .825-.587 1.413T20 21zm6-15h4V4h-4z"
+                    />
+                  </svg>
                 </div>
                 <div class="px-4">
                   <select
                     type="text"
-                    name="maritalStatus"
-                    id="maritalStatus"
+                    name="typeOfEmployment"
+                    id="typeOfEmployment"
                     class="bg-gray-50 outline-none text-sm focus:border-blue-300 w-full border-gray-300 border-b pl-9 py-1.5 focus:shadow-sm"
                     required
                   >
-                    <option  selected>Type of Employment</option>
+                    <option value="">Type of Employment</option>
                     <option value="Goverment">Goverment</option>
                     <option value="Private">Private</option>
                     <option value="Self-employed">Self-employed</option>
@@ -316,7 +344,28 @@
             <div class="px-6">
               <div class="relative mb-6">
                 <div class="absolute text-gray-600 left-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16"><g fill="currentColor"><path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8a4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0a5 5 0 0 1 10 0"/><path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207c0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158c0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522c0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569c0 .339-.257.571-.709.614v-1.195z"/><path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"/><path d="M9.998 5.083L10 5a2 2 0 1 0-3.132 1.65a5.982 5.982 0 0 1 3.13-1.567"/></g></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    viewBox="0 0 16 16"
+                  >
+                    <g fill="currentColor">
+                      <path
+                        fill-rule="evenodd"
+                        d="M11 15a4 4 0 1 0 0-8a4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0a5 5 0 0 1 10 0"
+                      />
+                      <path
+                        d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207c0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158c0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522c0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569c0 .339-.257.571-.709.614v-1.195z"
+                      />
+                      <path
+                        d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"
+                      />
+                      <path
+                        d="M9.998 5.083L10 5a2 2 0 1 0-3.132 1.65a5.982 5.982 0 0 1 3.13-1.567"
+                      />
+                    </g>
+                  </svg>
                 </div>
                 <div class="px-4">
                   <select
@@ -326,15 +375,23 @@
                     class="bg-gray-50 outline-none text-sm focus:border-blue-300 w-full border-gray-300 border-b pl-9 py-1.5 focus:shadow-sm"
                     required
                   >
-                    <option selected>---Loan Purpose---</option>
+                    <option value="">---Loan Purpose---</option>
                     <option value="Balance Transfer">Balance Transfer</option>
                     <option value="Appliance/s">Appliance/s</option>
-                    <option value="Furniture / Fixtures">Furniture / Fixtures</option>
-                    <option value="Electronic Gadgets / Devices">Electronic Gadgets / Devices</option>
+                    <option value="Furniture / Fixtures">
+                      Furniture / Fixtures
+                    </option>
+                    <option value="Electronic Gadgets / Devices">
+                      Electronic Gadgets / Devices
+                    </option>
                     <option value="Travel">Travel</option>
-                    <option value="Hospitalization /  Medical">Hospitalization /  Medical</option>
+                    <option value="Hospitalization /  Medical">
+                      Hospitalization / Medical
+                    </option>
                     <option value="Education">Education</option>
-                    <option value="Personal Consumption">Personal Consumption</option>
+                    <option value="Personal Consumption">
+                      Personal Consumption
+                    </option>
                     <option value="Special Events">Special Events</option>
                     <option value="Home Improvement">Home Improvement</option>
                     <option value="Car Repair">Car Repair</option>
@@ -346,7 +403,23 @@
             <div class="px-6">
               <div class="relative mb-6">
                 <div class="absolute text-gray-600 left-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M6.26 21.388H6c-.943 0-1.414 0-1.707-.293C4 20.804 4 20.332 4 19.389v-1.112c0-.518 0-.777.133-1.009c.133-.231.334-.348.736-.582c2.646-1.539 6.403-2.405 8.91-.91c.168.101.32.223.45.368a1.492 1.492 0 0 1-.126 2.134a.998.998 0 0 1-.427.24c.12-.014.235-.03.345-.047c.911-.145 1.676-.633 2.376-1.162l1.808-1.365a1.887 1.887 0 0 1 2.22 0c.573.433.749 1.146.386 1.728c-.423.678-1.019 1.545-1.591 2.075c-.573.53-1.426 1.004-2.122 1.34c-.772.373-1.624.587-2.491.728c-1.758.284-3.59.24-5.33-.118a15.031 15.031 0 0 0-3.017-.308m.326-18.803c-.367.367-.504.873-.555 1.664A2.25 2.25 0 0 0 8.25 2.03c-.79.052-1.297.189-1.664.556m10.828 0c-.367-.367-.873-.504-1.664-.555a2.25 2.25 0 0 0 2.22 2.219c-.052-.79-.189-1.297-.556-1.664m0 6.828c-.367.367-.873.504-1.664.555a2.25 2.25 0 0 1 2.22-2.219c-.052.79-.189 1.297-.556 1.664m-10.828 0c.367.367.873.504 1.664.555A2.25 2.25 0 0 0 6.03 7.75c.052.79.189 1.297.556 1.664"/><path fill="currentColor" fill-rule="evenodd" d="M6 5.75A3.75 3.75 0 0 0 9.75 2h4.5A3.75 3.75 0 0 0 18 5.75v.5A3.75 3.75 0 0 0 14.25 10h-4.5A3.75 3.75 0 0 0 6 6.25zM12 7a1 1 0 1 0 0-2a1 1 0 0 0 0 2" clip-rule="evenodd"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M6.26 21.388H6c-.943 0-1.414 0-1.707-.293C4 20.804 4 20.332 4 19.389v-1.112c0-.518 0-.777.133-1.009c.133-.231.334-.348.736-.582c2.646-1.539 6.403-2.405 8.91-.91c.168.101.32.223.45.368a1.492 1.492 0 0 1-.126 2.134a.998.998 0 0 1-.427.24c.12-.014.235-.03.345-.047c.911-.145 1.676-.633 2.376-1.162l1.808-1.365a1.887 1.887 0 0 1 2.22 0c.573.433.749 1.146.386 1.728c-.423.678-1.019 1.545-1.591 2.075c-.573.53-1.426 1.004-2.122 1.34c-.772.373-1.624.587-2.491.728c-1.758.284-3.59.24-5.33-.118a15.031 15.031 0 0 0-3.017-.308m.326-18.803c-.367.367-.504.873-.555 1.664A2.25 2.25 0 0 0 8.25 2.03c-.79.052-1.297.189-1.664.556m10.828 0c-.367-.367-.873-.504-1.664-.555a2.25 2.25 0 0 0 2.22 2.219c-.052-.79-.189-1.297-.556-1.664m0 6.828c-.367.367-.873.504-1.664.555a2.25 2.25 0 0 1 2.22-2.219c-.052.79-.189 1.297-.556 1.664m-10.828 0c.367.367.873.504 1.664.555A2.25 2.25 0 0 0 6.03 7.75c.052.79.189 1.297.556 1.664"
+                    />
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      d="M6 5.75A3.75 3.75 0 0 0 9.75 2h4.5A3.75 3.75 0 0 0 18 5.75v.5A3.75 3.75 0 0 0 14.25 10h-4.5A3.75 3.75 0 0 0 6 6.25zM12 7a1 1 0 1 0 0-2a1 1 0 0 0 0 2"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
                 </div>
                 <div class="px-4">
                   <input
@@ -364,17 +437,27 @@
             <div class="px-6">
               <div class="relative mb-6">
                 <div class="absolute text-gray-600 left-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M4 21q-.825 0-1.412-.587T2 19V8q0-.825.588-1.412T4 6h4V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v11q0 .825-.587 1.413T20 21zm6-15h4V4h-4z"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M4 21q-.825 0-1.412-.587T2 19V8q0-.825.588-1.412T4 6h4V4q0-.825.588-1.412T10 2h4q.825 0 1.413.588T16 4v2h4q.825 0 1.413.588T22 8v11q0 .825-.587 1.413T20 21zm6-15h4V4h-4z"
+                    />
+                  </svg>
                 </div>
                 <div class="px-4">
                   <select
                     type="text"
-                    name="maritalStatus"
-                    id="maritalStatus"
+                    name="ongoingLoan"
+                    id="ongoingLoan"
                     class="bg-gray-50 outline-none text-sm focus:border-blue-300 w-full border-gray-300 border-b pl-9 py-1.5 focus:shadow-sm"
                     required
                   >
-                    <option  selected>Do you have an ongoing loan?</option>
+                    <option value="">Do you have an ongoing loan?</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                   </select>
@@ -390,7 +473,9 @@
                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-1"
                 required
               />
-              <label for="checkBox" class="ms-2 text-sm font-medium text-gray-600"
+              <label
+                for="checkBox"
+                class="ms-2 text-sm font-medium text-gray-600"
                 >I agree with the
                 <a href="#" class="text-blue-600 hover:underline"
                   >terms and conditions</a
@@ -404,21 +489,33 @@
                 name="submitBtn"
                 id="submitBtn"
                 class="text-gray-50 bg-gradient-to-r w-full bg-blue-500 rounded px-14 py-2.5 text-center"
-              > Register
+              >
+                Register
               </button>
             </div>
           </div>
-          
-        </form>    
+        </form>
+        <!--  ! Form End-->
+        <!-- * Side Image One Div -->
         <div class="absolute opacity-20 top-96 left-30 right-1">
-          <img src="./assets/properties/laptop with open browser window.png"  height="500px" width="500px" alt="design.png">
+          <img
+            src="./assets/properties/laptop with open browser window.png"
+            height="500px"
+            width="500px"
+            alt="design.png"
+          />
         </div>
       </div>
-      <div class="absolute bottom-0 top-20 left-52 ">
-        <img src="./assets/properties/image-1.webp" width="350px" height="350px" alt="desingn.png">
+      <!-- * Side Image Two Div -->
+      <div class="absolute bottom-0 top-20 left-52">
+        <img
+          src="./assets/properties/Woman in blue suit leaning on the phone with open online shopping.png"
+          width="350px"
+          height="350px"
+          alt="desingn.png"
+        />
       </div>
-    </div>
+    </main>
     <script type="module" src="./assets/js/main.js"></script>
-    
   </body>
 </html>
