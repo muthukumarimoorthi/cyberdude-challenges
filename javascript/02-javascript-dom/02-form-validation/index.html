@@ -11,14 +11,17 @@
     <title>Online Loan Application</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body class="bg-blue">
-    <main>
-      <div>
-        <form id="applicationForm relative">
+  <body class="bg-blue ">
+    <main class="">
+      <div class="my-4 ">
+        <form id="applicationForm">
           <div class="mx-auto max-w-md bg-slate-50 py-3 font-nunito relative">
             <!-- * GitHub and Linkedin div-->
             <div class="flex space-x-3 justify-center px-2 py-2">
-              <a href="https://www.linkedin.com/in/muthukumari-m-8a1415221/" class="hover:text-blue-600" target="_blank"
+              <a
+                href="https://www.linkedin.com/in/muthukumari-m-8a1415221/"
+                class="hover:text-blue-600"
+                target="_blank"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -30,7 +33,10 @@
                     d="M216 20H40a20 20 0 0 0-20 20v176a20 20 0 0 0 20 20h176a20 20 0 0 0 20-20V40a20 20 0 0 0-20-20m-4 192H44V44h168Zm-100-36v-52a12 12 0 0 1 21.43-7.41A40 40 0 0 1 192 152v24a12 12 0 0 1-24 0v-24a16 16 0 0 0-32 0v24a12 12 0 0 1-24 0m-16-52v52a12 12 0 0 1-24 0v-52a12 12 0 0 1 24 0M68 80a16 16 0 1 1 16 16a16 16 0 0 1-16-16"
                   /></svg
               ></a>
-              <a href="https://github.com/muthukumarimoorthi/cyberdude-challenges/tree/main/javascript/02-javascript-dom/02-form-validation" target="_blank" class="hover:text-gray-400"
+              <a
+                href="https://github.com/muthukumarimoorthi/cyberdude-challenges/tree/main/javascript/02-javascript-dom/02-form-validation"
+                target="_blank"
+                class="hover:text-gray-400"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -71,14 +77,26 @@
               </div>
               <div class="justify-center items-center">
                 <img
-                  src="./assets/properties/laptop and credit card.png"
+                  src="./assets/properties/dribbble_canvas__personal_loan_.gif"
                   width="230"
                   height="230"
                   alt="computer image"
                 />
               </div>
             </div>
-            <!-- * Full Name input div -->
+            <!-- <div class="absolute -left-[218px] -z-50">
+              <div>
+                <img
+                  src="./assets/properties/Woman in blue suit leaning on the phone with open online shopping.png"
+                  width="500px"
+                  height="500px"
+                  alt="desingn.png"
+                />
+              </div>
+            </div> -->
+            <!-- Inputs Div Start -->
+            <div>
+              <!-- * Full Name input div -->
             <div class="px-6 pt-9">
               <div class="relative mb-6">
                 <div class="absolute text-gray-600 left-3">
@@ -493,40 +511,25 @@
                 Register
               </button>
             </div>
+            </div>
           </div>
-          <!-- * Side Image One Div -->
-          <div class="absolute opacity-20 top-96 left-30 right-1">
-            <img
-              src="./assets/properties/laptop with open browser window.png"
-              height="500px"
-              width="500px"
-              alt="design.png"
-            />
-          </div>
-          <!-- * Side Image Two Div -->
-      <div class="absolute bottom-0 top-64 -z-50 left-80">
-        <img
-          src="./assets/properties/Woman in blue suit leaning on the phone with open online shopping.png"
-          width="500px"
-          height="500px"
-          alt="desingn.png"
-        />
-      </div>
         </form>
         <!--  ! Form End-->
       </div>
-      
+
       <!-- ! Table Section Start -->
       <div
-        class="bg-white rounded p-5 max-w-6xl mx-auto mt-10 hidden"
+        class="rounded p-5 mx-auto mt-10 hidden font-nunito"
         id="approvalRequest"
       >
-        <div class="max-w-7xl bg-blue-400 mx-auto my-16 rounded-md px-5">
+        <div
+          class="max-w-7xl bg-[#709191] mx-auto my-16 rounded-md px-5"
+        >
           <div class="flex pt-8 space-x-2">
-            <h1 class="font-semibold text-3xl text-[#2B3252]">
+            <h1 class="font-semibold text-3xl text-gray-800">
               Approval Request
             </h1>
-            <span class="text-[#EF5455]"
+            <span class="text-gray-700"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -544,47 +547,47 @@
             ></span>
           </div>
           <!-- Table Div -->
-          <div class="py-8">
+          <div class="py-8 font-roboto">
             <table
-              class="table-auto text-sm w-full text-white bg-[#2B3252] rounded-sm border-2 border-gray-200 text-center"
+              class="table-auto text-sm w-full text-gray-900 rounded-sm border-2 border-gray-200 text-center"
             >
               <!-- Heading Row -->
               <thead>
-                <tr class="text-center">
-                  <th class="p-2 font-base border-2 border-gray-200">
+                <tr class="text-center bg-slate-500">
+                  <th class="p-2 border border-gray-200">
                     Customer Name
                   </th>
-                  <th class="p-2 font-base border-2 border-gray-200">
+                  <th class="p-2 font-base border border-gray-200">
                     Mobile Number
                   </th>
-                  <th class="p-2 font-base border-2 border-gray-200">
+                  <th class="p-2 font-base border border-gray-200">
                     Email ID
                   </th>
-                  <th class="p-2 font-base border-2 border-gray-200">
+                  <th class="p-2 font-base border border-gray-200">
                     Address
                   </th>
-                  <th class="p-2 font-base border-2 border-gray-200">
+                  <th class="p-2 font-base border border-gray-200 w-28 ">
                     Date of birth
                   </th>
-                  <th class="p-2 font-base border-2 border-gray-200">
+                  <th class="p-2 font-base border border-gray-200">
                     Marital Status
                   </th>
-                  <th class="p-2 font-base border-2 border-gray-200">
+                  <th class="p-2 font-base border border-gray-200">
                     Aadhar Card Number
                   </th>
-                  <th class="p-2 font-base border-2 border-gray-200">
+                  <th class="p-2 font-base border border-gray-200">
                     Type of Employment
                   </th>
-                  <th class="p-2 font-base border-2 border-gray-200">
+                  <th class="p-2 font-base border border-gray-200">
                     Loan Purpose
                   </th>
-                  <th class="p-2 font-base border-2 border-gray-200">
+                  <th class="p-2 font-base border border-gray-200">
                     Monthly Income
                   </th>
-                  <th class="p-2 font-base border-2 border-gray-200">
+                  <th class="p-2 font-base border border-gray-200">
                     Ongoing Loan
                   </th>
-                  <th class="p-2 font-base border-2 border-gray-200">
+                  <th class="p-2 font-base border border-gray-200">
                     Approval Section
                   </th>
                 </tr>

@@ -155,7 +155,7 @@ validateForm.onSuccess(() => {
 
   const existingData = localStorage.getItem("personData");
   const existingArray = JSON.parse(existingData);
-//   console.log(existingArray);
+  //   console.log(existingArray);
 
   const newData = [];
 
@@ -203,14 +203,14 @@ function getAllPersonsDatas() {
       const tdLoanPurposeEl = document.createElement("td");
       const tdIncomeEl = document.createElement("td");
       const tdOngoingLoanEl = document.createElement("td");
-      const approvalSectionEl =document.createElement("td")
+      const approvalSectionEl = document.createElement("td");
       const approvalBtnEl = document.createElement("button");
 
       tdNameEl.classList.add("px-2", "font-thin", "border", "border-gray-200");
       tdNameEl.textContent = personData.fullName;
 
       tdMobileEl.classList.add(
-        "px-2",
+        "p-2",
         "font-thin",
         "border",
         "border-gray-200"
@@ -221,7 +221,7 @@ function getAllPersonsDatas() {
       tdEmailEl.textContent = personData.email;
 
       tdAddressEl.classList.add(
-        "px-2",
+        "p-2",
         "font-thin",
         "border",
         "border-gray-200"
@@ -231,11 +231,16 @@ function getAllPersonsDatas() {
       tdDOBEl.classList.add("px-2", "font-thin", "border", "border-gray-200");
       tdDOBEl.textContent = personData.dOB;
 
-      tdMaritalStatusEl.classList.add("px-2", "font-thin", "border", "border-gray-200");
+      tdMaritalStatusEl.classList.add(
+        "p-2",
+        "font-thin",
+        "border",
+        "border-gray-200"
+      );
       tdMaritalStatusEl.textContent = personData.maritalStatus;
 
       tdAadharEl.classList.add(
-        "px-2",
+        "p-2",
         "font-thin",
         "border",
         "border-gray-200"
@@ -243,7 +248,7 @@ function getAllPersonsDatas() {
       tdAadharEl.textContent = personData.aadharCardNumber;
 
       tdEmploymentEl.classList.add(
-        "px-2",
+        "p-2",
         "font-thin",
         "border",
         "border-gray-200"
@@ -251,7 +256,7 @@ function getAllPersonsDatas() {
       tdEmploymentEl.textContent = personData.typeOfEmployment;
 
       tdLoanPurposeEl.classList.add(
-        "px-2",
+        "p-2",
         "font-thin",
         "border",
         "border-gray-200"
@@ -259,7 +264,7 @@ function getAllPersonsDatas() {
       tdLoanPurposeEl.textContent = personData.loanPurpose;
 
       tdIncomeEl.classList.add(
-        "px-2",
+        "p-2",
         "font-thin",
         "border",
         "border-gray-200"
@@ -267,19 +272,22 @@ function getAllPersonsDatas() {
       tdIncomeEl.textContent = personData.monthlyIncome;
 
       tdOngoingLoanEl.classList.add(
-        "px-2",
+        "p-2",
         "font-thin",
         "border",
         "border-gray-200"
       );
       tdOngoingLoanEl.textContent = personData.ongoingLoan;
-      approvalSectionEl.classList.add(
-        "px-2",
-        "font-thin",
-        "border",
-        "border-gray-200"
-      );
-      approvalSectionEl.textContent = personData.ongoingLoan;
+      
+      // approvalSectionEl.classList.add(
+      //   "p-2",
+      //   "font-thin",
+      //   "border",
+      //   "border-red-200"
+      // );
+
+      
+      
 
       approvalBtnEl.className =
         "px-2 py-1 rounded-md bg-red-600 hover:bg-red-700 text-white text-xs";
@@ -289,8 +297,8 @@ function getAllPersonsDatas() {
         approvalRequest(personData);
       });
 
-      tdOngoingLoanEl.classList.add("px-2", "py-1", "border");
-      tdOngoingLoanEl.append(approvalBtnEl);
+      approvalSectionEl.classList.add("px-2", "py-1", "border");
+      approvalSectionEl.append(approvalBtnEl);
 
       trEl.append(
         tdNameEl,
@@ -304,7 +312,7 @@ function getAllPersonsDatas() {
         tdLoanPurposeEl,
         tdIncomeEl,
         tdOngoingLoanEl,
-        approvalBtnEl
+        approvalSectionEl
       );
 
       newFinalValue.push(trEl);
@@ -315,23 +323,24 @@ function getAllPersonsDatas() {
 }
 
 function approvalRequest(personDataTable) {
-    const confirmation = confirm(
-      `Do you want to approval '${personDataTable["fullName"]}' loan request?`
+  const confirmation = confirm(
+    `Do you want to approval '${personDataTable["fullName"]}' loan request?`
+  );
+
+  if (confirmation) {
+    const existingData = localStorage.getItem(localKey);
+
+    const personDataObj = JSON.parse(existingData);
+
+    const otherRecords = personDataObj.filter(
+      (approvalReq) =>
+        approvalReq.aadharCardNumber != personDataTable["aadharCardNumber"]
     );
-  
-    if (confirmation) {
-      const existingData = localStorage.getItem(localKey);
-  
-      const personDataObj = JSON.parse(existingData);
-  
-      const otherRecords = personDataObj.filter(
-        (approvalReq) => approvalReq.aadharCardNumber != personDataTable["aadharCardNumber"]
-      );
-  
-      localStorage.setItem(localKey, JSON.stringify(otherRecords));
-  
-      getAllPersonsDatas();
-    }
+
+    localStorage.setItem(localKey, JSON.stringify(otherRecords));
+
+    getAllPersonsDatas();
   }
-  
-  getAllPersonsDatas();
+}
+
+getAllPersonsDatas();
