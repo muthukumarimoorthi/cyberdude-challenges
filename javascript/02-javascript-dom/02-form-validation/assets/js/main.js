@@ -206,76 +206,60 @@ function getAllPersonsDatas() {
       const approvalSectionEl = document.createElement("td");
       const approvalBtnEl = document.createElement("button");
 
-      tdNameEl.classList.add("px-2", "font-thin", "border", "border-gray-200");
+      tdNameEl.classList.add("px-2", "font-thin");
       tdNameEl.textContent = personData.fullName;
 
       tdMobileEl.classList.add(
         "p-2",
-        "font-thin",
-        "border",
-        "border-gray-200"
+        "font-thin"
       );
       tdMobileEl.textContent = personData.mobileNumber;
 
-      tdEmailEl.classList.add("px-2", "font-thin", "border", "border-gray-200");
+      tdEmailEl.classList.add("px-2", "font-thin");
       tdEmailEl.textContent = personData.email;
 
       tdAddressEl.classList.add(
         "p-2",
-        "font-thin",
-        "border",
-        "border-gray-200"
+        "font-thin"
       );
       tdAddressEl.textContent = personData.address;
 
-      tdDOBEl.classList.add("px-2", "font-thin", "border", "border-gray-200");
+      tdDOBEl.classList.add("px-2", "font-thin");
       tdDOBEl.textContent = personData.dOB;
 
       tdMaritalStatusEl.classList.add(
         "p-2",
-        "font-thin",
-        "border",
-        "border-gray-200"
+        "font-thin"
       );
       tdMaritalStatusEl.textContent = personData.maritalStatus;
 
       tdAadharEl.classList.add(
         "p-2",
-        "font-thin",
-        "border",
-        "border-gray-200"
+        "font-thin"
       );
       tdAadharEl.textContent = personData.aadharCardNumber;
 
       tdEmploymentEl.classList.add(
         "p-2",
-        "font-thin",
-        "border",
-        "border-gray-200"
+        "font-thin"
       );
       tdEmploymentEl.textContent = personData.typeOfEmployment;
 
       tdLoanPurposeEl.classList.add(
         "p-2",
-        "font-thin",
-        "border",
-        "border-gray-200"
+        "font-thin"
       );
       tdLoanPurposeEl.textContent = personData.loanPurpose;
 
       tdIncomeEl.classList.add(
         "p-2",
-        "font-thin",
-        "border",
-        "border-gray-200"
+        "font-thin"
       );
       tdIncomeEl.textContent = personData.monthlyIncome;
 
       tdOngoingLoanEl.classList.add(
         "p-2",
-        "font-thin",
-        "border",
-        "border-gray-200"
+        "font-thin"
       );
       tdOngoingLoanEl.textContent = personData.ongoingLoan;
       
@@ -290,14 +274,14 @@ function getAllPersonsDatas() {
       
 
       approvalBtnEl.className =
-        "px-2 py-1 rounded-md bg-red-600 hover:bg-red-700 text-white text-xs";
+        "px-2 py-1 rounded-md bg-green-700 hover:bg-green-800 text-slate-100 text-xs";
       approvalBtnEl.textContent = "Approval";
 
       approvalBtnEl.addEventListener("click", (e) => {
         approvalRequest(personData);
       });
 
-      approvalSectionEl.classList.add("px-2", "py-1", "border");
+      approvalSectionEl.classList.add("px-2", "py-1");
       approvalSectionEl.append(approvalBtnEl);
 
       trEl.append(
