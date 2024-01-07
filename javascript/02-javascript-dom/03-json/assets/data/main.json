@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1,
+    "month": "January",
+    "img": "",
+    "days": {
+      "sundays": 4,
+      "monday": 5,
+      "tuesday": 5,
+      "wednesday": 5,
+      "thursday": 4,
+      "friday": 4,
+      "saturday": 4
+    },
+    "totaldays": 31,
+    "holiday": true,
+    "holidaysName": {
+      "holiday1": "New Year's Day",
+      "holiday2": "Pongal",
+      "holiday3": "Thiruvalluvar Day",
+      "holiday4": "Uzhavar Thirunal",
+      "holiday5": "Thaipusam",
+      "holiday6": "Republic Day"
+    },
+    "holidayDate": [
+      "January 1",
+      "January 15",
+      "January 16",
+      "January 17",
+      "January 25",
+      "January 26"
+    ]
+  },
+  {
+    "id": 2,
+    "month": "February",
+    "img": "",
+    "days": {
+      "sunday": 4,
+      "monday": 4,
+      "tuesday": 4,
+      "wednesday": 4,
+      "thursday": 5,
+      "friday": 4,
+      "saturday": 4
+    },
+    "totaldays": 29,
+    "holiday": false
+  },
+  {
+    "id": 3,
+    "month": "March",
+    "img": "",
+    "days": {
+      "sundays": 5,
+      "monday": 4,
+      "tuesday": 4,
+      "wednesday": 4,
+      "thursday": 4,
+      "friday": 5,
+      "saturday": 5
+    },
+    "totaldays": 31,
+    "holiday": true,
+    "holidaysName": {
+      "holiday3": "Good Friday"
+    },
+    "holidayDate": ["March 29"]
+  },
+  {
+    "id": 4,
+    "month": "April",
+    "img": "",
+    "days": {
+      "sundays": 4,
+      "monday": 5,
+      "tuesday": 5,
+      "wednesday": 4,
+      "thursday": 4,
+      "friday": 4,
+      "saturday": 4
+    },
+    "totaldays": 30,
+    "holiday": true,
+    "holidayName": {
+      "holiday1": "Telugu New Year's Day",
+      "holiday2": "Eid-Ul-Fitr",
+      "holiday3": "Ambedkar's Birthday , Tamil New Year's Day",
+      "holiday4": "Mahavir Jayanti"
+    },
+    "holidayDate": ["April 9", "April 11", "April 14", "April 21"]
+  },
+  {
+    "id": 5,
+    "month": "May",
+    "img": "",
+    "days": {
+      "sundays": 4,
+      "monday": 4,
+      "tuesday": 4,
+      "wednesday": 5,
+      "thursday": 5,
+      "friday": 5,
+      "saturday": 4
+    },
+    "totaldays": 31,
+    "holiday": true,
+    "holidayName": {
+      "holiday1": "May Day"
+    },
+    "holidayDate": ["May 1"]
+  },
+  {
+    "id": 6,
+    "month": "June",
+    "img": "",
+    "days": {
+      "sundays": 5,
+      "monday": 4,
+      "tuesday": 4,
+      "wednesday": 4,
+      "thursday": 4,
+      "friday": 4,
+      "saturday": 5
+    },
+    "totaldays": 30,
+    "holiday": true,
+    "holidayName": {
+      "holiday1": "Id-ul-Zuha (Bakrid)"
+    },
+    "holidayDate": ["June 17"]
+  },
+  {
+    "id": 7,
+    "month": "July",
+    "img": "",
+    "days": {
+      "sundays": 4,
+      "monday": 5,
+      "tuesday": 5,
+      "wednesday": 5,
+      "thursday": 4,
+      "friday": 4,
+      "saturday": 4
+    },
+    "totaldays": 31,
+    "holiday": true,
+    "holidayName": {
+      "holiday1": "Muharram"
+    },
+    "holidayDate": ["July 17"]
+  },
+  {
+    "id": 8,
+    "month": "August",
+    "img": "",
+    "days": {
+      "sundays": 4,
+      "monday": 4,
+      "tuesday": 4,
+      "wednesday": 4,
+      "thursday": 5,
+      "friday": 5,
+      "saturday": 5
+    },
+    "totaldays": 31,
+    "holiday": true,
+    "holidayName": {
+      "holiday1": "Independence Day",
+      "holiday2": "Krishna Janmashtami"
+    },
+    "holidayDate": ["August 15", "August 26"]
+  },
+  {
+    "id": 9,
+    "month": "September",
+    "img": "",
+    "days": {
+      "sundays": 5,
+      "monday": 5,
+      "tuesday": 4,
+      "wednesday": 4,
+      "thursday": 4,
+      "friday": 4,
+      "saturday": 4
+    },
+    "totaldays": 30,
+    "holiday": true,
+    "holidayName": {
+      "holiday1": "Ganesh Chaturthi",
+      "holiday2": "Milad-Un-Nabi"
+    },
+    "holidayDate": ["September 7", "September 16"]
+  },
+  {
+    "id": 10,
+    "month": "October",
+    "img": "",
+    "days": {
+      "sundays": 4,
+      "monday": 4,
+      "tuesday": 5,
+      "wednesday": 5,
+      "thursday": 5,
+      "friday": 4,
+      "saturday": 4
+    },
+    "totaldays": 31,
+    "holiday": true,
+    "holidayName": {
+      "holiday1": "Mahatma Gandhi Jayanthi",
+      "holiday2": "Dussehra (Maha Navami), Ayudha Puja",
+      "holiday3": "Dussehra",
+      "holiday4": "Diwali"
+    },
+    "holidayDate": ["October 2", "October 11", "October 12", "October 31"]
+  },
+  {
+    "id": 11,
+    "month": "November",
+    "img": "",
+    "days": {
+      "sundays": 4,
+      "monday": 4,
+      "tuesday": 4,
+      "wednesday": 4,
+      "thursday": 4,
+      "friday": 5,
+      "saturday": 5
+    },
+    "totaldays": 30,
+    "holiday": false
+  },
+  {
+    "id": 12,
+    "month": "December",
+    "img": "",
+    "days": {
+      "sundays": 5,
+      "monday": 5,
+      "tuesday": 5,
+      "wednesday": 4,
+      "thursday": 4,
+      "friday": 4,
+      "saturday": 4
+    },
+    "totaldays": 31,
+    "holiday": true,
+    "holidayName": {
+      "holiday1": "Christmas"
+    },
+    "holidayDate": ["December 25"]
+  }
+]
