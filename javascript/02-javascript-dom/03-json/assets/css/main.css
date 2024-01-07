@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.li-month {
+    @apply m-5 p-6 rounded bg-slate-200
+}
+.month-list {
+    @apply font-semibold text-base
+}
+.month-name {
+    @apply font-normal
+}
+.div-flex {
+    @apply grid grid-cols-2
+}
+.days {
+    @apply font-semibold text-base px-3 grid grid-cols-2
+}
