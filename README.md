@@ -22,4 +22,4 @@ This internship is provided by [CyberDude Networks Pvt. Ltd.](https://youtube.co
 
 | S.No | Technologies Used                    |
 | :--- | ------------------------------------ |
-| 01   | [Javascript](./JavaScript/) |
+| 01   | [Javascript](./javascript/) |
