@@ -1,6 +1,8 @@
 import months from "../data/main.json";
 
 const monthListEl = document.querySelector("#monthsList");
+const januaryEl = document.querySelector("#january")
+console.log(januaryEl);
 
 months.forEach((month) => {
   monthListEl.innerHTML += `<div class="li-month"> 

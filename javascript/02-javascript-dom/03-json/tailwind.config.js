@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'pacifico':[ 'Pacifico', 'cursive'],
+        'poppins':['Poppins'],
+        'roboto':['Roboto'],
+        'satisfy':['Satisfy'],
+        'skranji':['Skranji'],
+        'nunito':['Nunito']
+       },
+    },
   },
   plugins: [],
 }
