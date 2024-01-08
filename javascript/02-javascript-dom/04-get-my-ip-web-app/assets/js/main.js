@@ -9,10 +9,11 @@ xhr.onreadystatechange = function () {
   if (this.readyState === 4) {
     console.log(xhr.responseText);
     if (this.status === 200) {
+      ipAddress.innerHTML =
         ipAddress.textContent = xhr.responseText;
     } else {
         ipAddress.innerHTML =
-        `<div class='alert-danger'>COULDN'T GET YOUR IP.</div>`;
+        `<div class="bg-red">COULDN'T GET YOUR IP.</div>`;
     }
   }
 

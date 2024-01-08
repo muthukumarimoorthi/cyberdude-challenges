@@ -2,7 +2,6 @@
   {
     "id": 1,
     "month": "January",
-    "img": "https://img.freepik.com/premium-vector/january-2024-calendar_637414-375.jpg?w=2000",
     "days": {
       "sundays": 4,
       "monday": 5,
@@ -34,7 +33,6 @@
   {
     "id": 2,
     "month": "February",
-    "img": "./kljflk",
     "days": {
       "sundays": 4,
       "monday": 4,
@@ -51,7 +49,6 @@
   {
     "id": 3,
     "month": "March",
-    "img": "https://img.freepik.com/premium-vector/march-2024-calendar_637414-379.jpg?w=2000",
     "days": {
       "sundays": 5,
       "monday": 4,
@@ -71,7 +68,6 @@
   {
     "id": 4,
     "month": "April",
-    "img": "https://img.freepik.com/premium-vector/march-2024-calendar_637414-379.jpg?w=2000",
     "days": {
       "sundays": 4,
       "monday": 5,
@@ -94,7 +90,6 @@
   {
     "id": 5,
     "month": "May",
-    "img": "https://img.freepik.com/premium-vector/may-2024-calendar_637414-380.jpg?w=2000",
     "days": {
       "sundays": 4,
       "monday": 4,
@@ -114,7 +109,6 @@
   {
     "id": 6,
     "month": "June",
-    "img": "https://img.freepik.com/premium-vector/june-2024-calendar_637414-380.jpg?w=2000",
     "days": {
       "sundays": 5,
       "monday": 4,
@@ -134,7 +128,6 @@
   {
     "id": 7,
     "month": "July",
-    "img": "https://img.freepik.com/premium-vector/july-2024-calendar_637414-380.jpg?w=2000",
     "days": {
       "sundays": 4,
       "monday": 5,
@@ -154,7 +147,6 @@
   {
     "id": 8,
     "month": "August",
-    "img": "https://img.freepik.com/premium-vector/august-2024-calendar_637414-380.jpg?w=2000",
     "days": {
       "sundays": 4,
       "monday": 4,
@@ -175,7 +167,6 @@
   {
     "id": 9,
     "month": "September",
-    "img": "https://img.freepik.com/premium-vector/september-2024-calendar_637414-380.jpg?w=2000",
     "days": {
       "sundays": 5,
       "monday": 5,
@@ -196,7 +187,6 @@
   {
     "id": 10,
     "month": "October",
-    "img": "https://img.freepik.com/premium-vector/october-2024-calendar_637414-380.jpg?w=2000",
     "days": {
       "sundays": 4,
       "monday": 4,
@@ -219,7 +209,6 @@
   {
     "id": 11,
     "month": "November",
-    "img": "https://img.freepik.com/premium-vector/november-2024-calendar_637414-380.jpg?w=2000",
     "days": {
       "sundays": 4,
       "monday": 4,
@@ -236,7 +225,6 @@
   {
     "id": 12,
     "month": "December",
-    "img": "https://img.freepik.com/premium-vector/december-2024-calendar_637414-380.jpg?w=2000",
     "days": {
       "sundays": 5,
       "monday": 5,
