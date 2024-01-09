@@ -4,11 +4,11 @@ Creating loan application form using just-validate.
 
 #### Screenshots
 
-![Screenshot](./assets/images/Screenshot%202024-01-09%20135713.png)
+![Screenshot](./assets/properties/Screenshot%202024-01-09%20140654.png)
 
 ## 🎉 Check it yourself!
 
-| ✅ Live Website: | [https://muthukumarimoorthi.github.io/cyberdude-challenges/javascript/02-javascript-dom/03-json/dist/index.html](https://muthukumarimoorthi.github.io/cyberdude-challenges/javascript/02-javascript-dom/03-json/dist/index.html.html)                                                                                            |
+| ✅ Live Website: | [Link](https://muthukumarimoorthi.github.io/cyberdude-challenges/javascript/02-javascript-dom/02-form-validation/dist/index.html)                                                                                            |
 
 ---
 

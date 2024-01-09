@@ -8,7 +8,7 @@ Get the IP of the visitor.
 
 ## 🎉 Check it yourself!
 
-| ✅ Live Website: | [https://muthukumarimoorthi.github.io/cyberdude-challenges/javascript/02-javascript-dom/04-get-my-ip-web-app/dist/index.html](https://muthukumarimoorthi.github.io/cyberdude-challenges/javascript/02-javascript-dom/04-get-my-ip-web-app/dist/index.html)                                                                                            |
+| ✅ Live Website: | [Link](https://muthukumarimoorthi.github.io/cyberdude-challenges/javascript/02-javascript-dom/04-get-my-ip-web-app/dist/index.html)                                                                                            |
 
 ---
 

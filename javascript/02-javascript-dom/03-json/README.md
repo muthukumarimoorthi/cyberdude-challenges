@@ -8,7 +8,7 @@ Get value from JSON file.
 
 ## 🎉 Check it yourself!
 
-| ✅ Live Website: | [https://muthukumarimoorthi.github.io/cyberdude-challenges/javascript/02-javascript-dom/03-json/dist/index.html](https://muthukumarimoorthi.github.io/cyberdude-challenges/javascript/02-javascript-dom/03-json/dist/index.html.html)                                                                                            |
+| ✅ Live Website: | [Link](https://muthukumarimoorthi.github.io/cyberdude-challenges/javascript/02-javascript-dom/03-json/dist/index.html.html)                                                                                            |
 
 ---
 
