@@ -4,30 +4,34 @@ const imageSrc = document.getElementById("imgSrc");
 const hiddenDivEl = document.getElementById("hiddenDiv");
 console.log(ytLinkEl);
 
-// https://www.youtube.com/watch?v=Fh9YgIT1mPc
-// https://www.youtube.com/watch?v=UK1kn-VFd7Y&t=2798s
-// https://i.ytimg.com/vi/[VIDEO_ID]/maxresdefault.jpg
-
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
-  //   console.log(ytLinkEl.value);
-  const videoLink = ytLinkEl.value;
-  const splitVideoLink = videoLink.split("=");
-  const valueOfLink = splitVideoLink[1];
-  //   console.log(valueOfLink);
-  if (valueOfLink.includes("&")) {
-    const value1 = valueOfLink.split("&");
-    const finalLinkId = value1[0];
-    const getThumbnail = `https://i.ytimg.com/vi/${finalLinkId}/maxresdefault.jpg`;
+
+  const videoLink = ytLinkEl.value.split("=")[1];
+
+  if (videoLink.includes("&")) {
+    const value1 = videoLink.split("&")[0];
+    const getThumbnail = `https://i.ytimg.com/vi/${value1}/maxresdefault.jpg`;
     imageSrc.setAttribute("src", getThumbnail);
-    console.log(getThumbnail);
   } else {
-    const getThumbnail = `https://i.ytimg.com/vi/${valueOfLink}/maxresdefault.jpg`;
-    console.log(getThumbnail);
+    const getThumbnail = `https://i.ytimg.com/vi/${videoLink}/maxresdefault.jpg`;
     imageSrc.setAttribute("src", getThumbnail);
   }
   hiddenDivEl.classList.remove("hidden");
 });
+
+
+
+
+
+
+
+
+
+
+// My Challenge
+// https://www.youtube.com/watch?v=Fh9YgIT1mPc
+// https://i.ytimg.com/vi/[VIDEO_ID]/maxresdefault.jpg
 
 // My Logic
 // const valueOfLink = "UK1kn-VFd7Y&t";
@@ -38,3 +42,22 @@ formEl.addEventListener("submit", (e) => {
 // } else {
 //   console.log("Not found");
 // }
+
+// Before
+
+// const videoLink = ytLinkEl.value;
+//   const splitVideoLink = videoLink.split("=");
+//   const valueOfLink = splitVideoLink[1];
+//   //   console.log(valueOfLink);
+//   if (valueOfLink.includes("&")) {
+//     const value1 = valueOfLink.split("&");
+//     const finalLinkId = value1[0];
+//     const getThumbnail = `https://i.ytimg.com/vi/${finalLinkId}/maxresdefault.jpg`;
+//     imageSrc.setAttribute("src", getThumbnail);
+//     console.log(getThumbnail);
+//   } else {
+//     const getThumbnail = `https://i.ytimg.com/vi/${valueOfLink}/maxresdefault.jpg`;
+//     console.log(getThumbnail);
+//     imageSrc.setAttribute("src", getThumbnail);
+//   }
+//   hiddenDivEl.classList.remove("hidden");
