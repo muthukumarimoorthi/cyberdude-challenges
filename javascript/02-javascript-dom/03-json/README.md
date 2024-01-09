@@ -1,6 +1,6 @@
-# Online Loan Application Form
+# JSON Task
 
-Creating loan application form using just-validate.
+Get value from JSON file.
 
 #### Screenshots
 
