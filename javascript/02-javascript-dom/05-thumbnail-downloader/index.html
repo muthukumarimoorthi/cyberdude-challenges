@@ -12,19 +12,25 @@
     <link rel="stylesheet" href="./assets/css/main.css">
   </head>
   <body class="bg-slate-950 max-w-4xl mx-auto">
-    <!-- <header class="py-3">
-      <div class="text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14q.425 0 .713.288T20 21q0 .425-.288.713T19 22H5q-.425 0-.712-.288T4 21q0-.425.288-.712T5 20m7-2.625q-.225 0-.437-.1t-.363-.3l-4.95-6.35q-.375-.5-.1-1.062T7.05 9H9V3q0-.425.288-.712T10 2h4q.425 0 .713.288T15 3v6h1.95q.625 0 .9.563t-.1 1.062l-4.95 6.35q-.15.2-.363.3t-.437.1"/></svg>
-        <h1>YT Downloader</h1>
+    <header class="py-3 font-pacifico flex items-center justify-between">
+      <div class="text-white flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="text-red-600" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14q.425 0 .713.288T20 21q0 .425-.288.713T19 22H5q-.425 0-.712-.288T4 21q0-.425.288-.712T5 20m7-2.625q-.225 0-.437-.1t-.363-.3l-4.95-6.35q-.375-.5-.1-1.062T7.05 9H9V3q0-.425.288-.712T10 2h4q.425 0 .713.288T15 3v6h1.95q.625 0 .9.563t-.1 1.062l-4.95 6.35q-.15.2-.363.3t-.437.1"/></svg>
+        <h1 class="text-4xl font-extrabold text-slate-50">YTT Downloader</h1>
       </div>
-    </header> -->
-    <main class=" bg-slate-200 rounded bg-opacity-15 mb-10 mt-8">
+      <div>
+        <div class="text-slate-100 space-x-1">
+          <button class="bg-red-600 px-3 py-2 font-bold rounded-lg shadow-lg hover:bg-red-500"><a href="https://www.linkedin.com/in/muthukumari-m-8a1415221/" target="_blank">Linkedin</a></button>
+          <button class="bg-red-600 font-bold px-3 py-2 rounded-lg shadow-lg hover:bg-red-500"><a href="https://github.com/muthukumarimoorthi/cyberdude-challenges/tree/main/javascript/02-javascript-dom/05-thumbnail-downloader" target="_blank">GitHub</a></button>
+        </div>
+      </div>
+    </header>
+    <main class=" bg-slate-200 rounded bg-opacity-15 mb-10 mt-8 font-pacifico shadow-lg shadow-zinc-700">
       <div class="">
         <form class="p-10 space-x-3 flex items-center justify-center" id="link">
           <label>
-            <input class="outline-none rounded-lg px-4 py-2 w-full" type="text" id="ytLink" placeholder="Paste video link here" required>
+            <input class="outline-none rounded-lg px-4 py-2 w-full placeholder-slate-400" type="text" id="ytLink" placeholder="Paste video link here..." required>
           </label>
-          <button class="px-4 py-2 rounded-lg bg-red-600 text-white" >Download</button>
+          <button class="px-4 py-2 rounded-lg font-semibold bg-red-600 text-white hover:bg-red-500" >Download</button>
         </form>
       </div>
       <div class="flex items-center justify-center">
