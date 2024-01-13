@@ -9,7 +9,7 @@ const apiURL = "https://api.adviceslip.com/advice";
 btnEl.style.display = "none";
 
 btnEl.addEventListener("click", () => {
-  window.location.href = "./";
+  window.location.reload()
 });
 
 const fetchAPI = fetch(apiURL)
