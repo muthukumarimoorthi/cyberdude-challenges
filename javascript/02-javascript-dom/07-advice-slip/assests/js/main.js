@@ -16,7 +16,7 @@ const fetchAPI = fetch(apiURL)
   .then((response) => response.json())
   .then((data) => {
     spanEl.innerText=`#${data.slip.id}`
-    adviceBlockEl.innerText = `${data.slip.advice}`;
+    adviceBlockEl.innerText = `"${data.slip.advice}"`;
   });
 
 btnEl.style.display = "block";
