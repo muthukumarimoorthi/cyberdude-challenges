@@ -24,7 +24,4 @@ This internship is provided by [CyberDude Networks Pvt. Ltd.](https://youtube.co
 | :--- | ------------------------------------ |
 | 01   | [Javascript](./javascript/) |
 
-<a href="">
-  <img src="https://ibb.co/xXwVx0j"/>
-</a>
 
