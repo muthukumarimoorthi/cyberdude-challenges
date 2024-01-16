@@ -27,7 +27,22 @@
             >
               Create and account
             </h1>
-            <form class="space-y-4 md:space-y-6">
+            <form class="space-y-4 md:space-y-6" id="registerForm">
+              <div>
+                <label
+                  for="fullName"
+                  class="block mb-2 text-sm font-medium text-gray-900"
+                  >Full name</label
+                >
+                <input
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                  placeholder="Abi Thetchana"
+                  required
+                />
+              </div> 
               <div>
                 <label
                   for="email"
@@ -65,9 +80,9 @@
                   >Confirm password</label
                 >
                 <input
-                  type="confirm-password"
+                  type="password"
                   name="confirm-password"
-                  id="confirm-password"
+                  id="repeat-password"
                   placeholder="••••••••"
                   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                   required=""
@@ -96,7 +111,7 @@
               </div>
               <button
                 type="submit"
-                class="w-full text-white bg-blue-400 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                class="w-full text-white bg-blue-400 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" id="btn"
               >
                 Create an account
               </button>
