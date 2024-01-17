@@ -2,24 +2,17 @@ import JustValidate from "just-validate";
 
 const registerFormEl = document.getElementById("registerForm");
 const btnEl = document.getElementById("btn");
-console.dir(btnEl);
-
-// const handleSubmit = (event) => {
-//     event.preventDefault(); // Prevent default behaviour
-
-//     const formData = new FormData(registerFormEl);
-//     const data = Object.fromEntries(formData);
-//     console.log(data);
-
-// }
-
-// registerFormEl.addEventListener("submit", handleSubmit);
+const localKey = "personData";
 
 const validator = new JustValidate(registerFormEl);
+// console.log(registerFormEl);
 
-validator.addField("#fullname", [{
-    
-}]);
+validator.addField("#fullName", [
+  {
+    rule: "required",
+    errorMessage: "Your name is required Ex: Abi Thetchana",
+  },
+]);
 
 validator.addField("#email", [
   {
@@ -52,3 +45,67 @@ validator.addField("#repeat-password", [
     errorMessage: "Passwords should be the same",
   },
 ]);
+
+validator.addField("#terms", [
+  {
+    rule: "required",
+    errorMessage: "You need to accept the terms and conditions",
+  },
+]);
+
+const API = "https://ipv4.icanhazip.com"
+const getIP = async () => {
+  const fetchURL = await fetch(API);
+  const bodyURL = await fetchURL.text()
+  return bodyURL;
+}
+
+const fetchData = await getIP()
+
+
+validator.onSuccess(() => {
+  const formData = new FormData(registerFormEl);
+  formData.append("IP", fetchData);
+  const formValueObj = Object.fromEntries(formData.entries());
+
+  
+  
+  // const getIpAddress = async ()=> {
+  //   try {
+  //     const response = await fetch(API);
+  //     if (response.ok) {
+  //       const ipAddress = await response.text();
+  //       console.log(ipAddress);
+  //       formData.append("IP", JSON.stringify(ipAddress))
+  //       // formData.append("IP", JSON.stringify(ipAddress));
+  //     } else {
+  //       console.log("COULDN'T GET YOUR IP.");
+  //     }
+  //   } catch (error) {
+  //     console.error("An error occurred:", error);
+  //   }
+  // }
+
+  // const edudaKambiya = await getIpAddress()
+  
+  // const localIP = await getIpAgetIpAddressddress()
+
+  const existingData = localStorage.getItem("personData");
+  const existingArray = JSON.parse(existingData);
+
+  const newData = [];
+
+  if (existingArray) {
+    existingArray.push(formValueObj);
+
+    localStorage.setItem(localKey, JSON.stringify(existingArray));
+  } else {
+    newData.push(formValueObj);
+
+    localStorage.setItem(localKey, JSON.stringify(newData));
+  }
+
+  alert("submitted successfully!");
+
+  registerFormEl.reset();
+});
