@@ -29,7 +29,7 @@ validator.addField("#password", [
     errorMessage: "Password is required",
   },
 ]);
-validator.addField("#repeat-password", [
+validator.addField("#confirm-password", [
   {
     rule: "required",
     errorMessage: "Re-enter your password",
