@@ -2,7 +2,7 @@
 export default {
   content: [
     "./index.html",
-    "./login.html",
+    "./assets/js/main.js",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {

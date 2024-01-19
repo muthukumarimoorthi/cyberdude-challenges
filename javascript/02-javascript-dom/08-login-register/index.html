@@ -7,26 +7,67 @@
     <title>Register | YUniversity</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body class="bg-[#332941]">
-    <section
-      class="flex items-center justify-end mt-3 space-x-4 max-w-7xl mx-auto"
-    >
-      <button
-        id="loginHiddenbtn"
-        class="bg-[#714bb8] px-4 py-2 text-slate-100 rounded-lg"
+  <body class="bg-white max-w-6xl mx-auto">
+    <section class="">
+      <header
+        class="max-w-6xl mx-auto bg-[#714bb8] p-4 rounded-b-2xl flex justify-between items-center"
       >
-        <a href="loginSection">Login</a>
-      </button>
-      <button
-        id="registerHiddenbtn"
-        class="bg-[#714bb8] px-4 py-2 text-slate-100 rounded-lg"
-      >
-        <a href="">Register</a>
-      </button>
+        <div class="text-slate-100 flex space-x-2">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="45"
+              height="45"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256 64L32 176.295l32 21.072V400l32 16V217.849L255.852 320l132.144-85.451L480 174.727z"
+                fill="currentColor"
+              />
+              <path
+                d="M390.13 256L256 343.768 120.531 256 112 337.529C128 349.984 224 416 256.002 448 288 416 384 350.031 400 337.561L390.13 256z"
+                fill="currentColor"
+              /></svg
+          ></span>
+          <span class="text-4xl font-bold">CDCommunity</span>
+        </div>
+        <div class="flex space-x-4 text-slate-100 text-base font-semibold pr-4">
+          <button id="imgSectionSpan" class="outline-none hover:underline">
+            <a href="#imgSection">Home</a>
+          </button>
+          <button id="registerSectionSpan" class="outline-none hover:underline">
+            <a href="#registerSection">Register</a>
+          </button>
+          <button id="loginSectionHiddenSpan" class="outline-none hover:underline">
+            <a href="#loginSectionHidden">Login</a>
+          </button>
+          <button class="outline-none hover:underline"><a href="https://github.com/muthukumarimoorthi/cyberdude-challenges/tree/main/javascript/02-javascript-dom" target="_blank">GitHub</a></button>
+          <button class="outline-none hover:underline"><a href="https://www.linkedin.com/in/muthukumari-m-8a1415221/" target="_blank">LinkedIn</a></button>
+        </div>
+      </header>
+      <section id="imgSection" class="flex justify-evenly items-center px-3">
+        <div class="">
+          <img
+            src="./assets/js/64fc1395455f4f05c97a5c7f6f0af665.gif"
+            height="2500px"
+            width="2500px"
+            alt=""
+          />
+        </div>
+        <div>
+          <span class="font-lato text-lg font-semibold">
+            Hello Guys, Welcome to the <a class="text-[#714bb8] font-bold" href="https://www.cyberdudenetworks.com/" target="_blank">CyberDude</a> Community (CDCommunity). Lets
+            Build and grow as a community together. A Community where every Web
+            developer Intern is welcome. We will grow as a single community and
+            help each other with their struggles to overcome and
+            build a community.
+          </span>
+        </div>
+      </section>
     </section>
     <section
       id="registerSection"
-      class="max-w-lg bg-slate-100 rounded-lg mx-auto mt-10 mb-20"
+      class="max-w-lg bg-slate-100 rounded-lg mx-auto mt-10 mb-20 hidden"
     >
       <div
         class="bg-[#714bb8] text-center rounded-t-lg p-6 space-y-4 md:space-y-6 sm:p-8"
@@ -140,8 +181,8 @@
         </form>
       </div>
     </section>
-    <section class="" id="loginSectionHidden">
-      <div class="">
+    <section class="hidden" id="loginSectionHidden">
+      <div class="max-w-lg mx-auto">
         <div
           class="flex flex-col items-center justify-center px-6 mx-auto md:h-screen lg:py-0"
         >
@@ -154,7 +195,7 @@
           <div
             class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0"
           >
-            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8 bg-slate-100">
               <h1 class="text-xl font-bold text-gray-900 md:text-2xl">
                 Sign in to your account
               </h1>
@@ -189,6 +230,18 @@
                     required=""
                   />
                 </div>
+                <!-- <div class="relative">
+                <div class="absolute top-24 left-80">
+                  <div class="">
+                    <img
+                      src="./assets/js/Woman in blue suit leaning on the phone with open online shopping.png"
+                      width="1000px"
+                      height="500px"
+                      alt="desingn.png"
+                    />
+                  </div>
+                </div>
+               </div> -->
                 <div class="flex items-center justify-between">
                   <div class="flex items-start">
                     <div class="flex items-center h-5">
@@ -236,7 +289,10 @@
         </div>
       </div>
     </section>
-    <section class="max-w-lg mx-auto" id="noteSection">
+    <section
+      class="hidden max-w-2xl mx-auto pt-10 mb-20 rounded-lg"
+      id="noteSection"
+    >
       <div
         class="bg-slate-50 p-10 rounded-lg flex flex-col items-center space-y-5"
       >
@@ -263,45 +319,43 @@
           >
           <span class="text-base font-medium px-10">Your login history!</span>
         </div>
-        <button
+        <!-- <button
           class="bg-[#714bb8] px-4 py-2 rounded-lg text-slate-50 hover:bg-[#482f75]"
         >
           <a href="#ipSection" id="clickHere">Click Here>>></a>
-        </button>
+        </button> -->
       </div>
-    </section>
-    <section id="ipSection" class="max-w-2xl mx-auto">
-      <div class="bg-slate-100 rounded-lg py-4 px-4 my-20 space-y-4">
-        <div class="flex flex-col items-center">
-          <div><h1 class="text-2xl font-bold text-slate-800"></h1></div>
-          <div
-            class="py-5 bg-[#714bb8] text-slate-100 w-full text-5xl font-bold rounded-lg text-center"
-          >
-            <span>LOGIN IP : <span id="ipSectionSpan"></span></span>
+      <section id="ipSection" class="max-w-2xl mx-auto">
+        <div class="bg-slate-100 rounded-lg px-4 my-20 space-y-4">
+          <div class="flex flex-col items-center">
+            <div><h1 class="text-2xl font-bold text-slate-800"></h1></div>
+            <div
+              class="py-5 bg-[#714bb8] text-slate-100 w-full text-5xl font-bold rounded-lg text-center"
+            >
+              <span>LOGIN IP : <span id="ipSectionSpan"></span></span>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="max-w-2xl mx-auto mb-10 bg-slate-100 rounded-lg">
+        <div class="rounded-lg px-5 pt-5">
+          <table class="w-full text-sm rounded-lg">
+            <thead class="text-xs text-gray-50 uppercase bg-[#714bb8]">
+              <tr class="">
+                <th class="px-6 py-3">User ID</th>
+                <th class="px-6 py-3">Time</th>
+              </tr>
+            </thead>
+            <tbody class="bg-slate-100">
+              <tr>
+                <th class="px-6 py-3" id="tableHeadOne"></th>
+                <th class="px-6 py-3" id="tableHeadTwo"></th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </section>
-    <section class="max-w-2xl mx-auto my-10 bg-slate-100 rounded-lg">
-      <div class="rounded-lg px-5 pt-5">
-        <table class="w-full text-sm rounded-lg">
-          <thead class="text-xs text-gray-50 uppercase  bg-[#714bb8]">
-            <tr class="">
-              <th class="px-6 py-3">User ID</th>
-              <th class="px-6 py-3">Time</th>
-            </tr>
-          </thead>
-          <tbody class="bg-slate-100">
-            <tr>
-              <th class="px-6 py-3">abithetcha@gmail.com</th>
-              <th class="px-6 py-3">10:10 PM</th>
-            </tr>
-          </tbody>
-        </table>
-    </div>
-    </section>
-
-    <!-- <script type="module" src="./assets/js/register.js"></script> -->
     <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>

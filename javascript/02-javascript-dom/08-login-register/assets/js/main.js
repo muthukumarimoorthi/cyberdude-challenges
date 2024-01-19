@@ -1,9 +1,35 @@
 import JustValidate from "just-validate";
 
 const registerFormEl = document.getElementById("registerForm");
+const registerNav = document.getElementById("registerSection");
 const loginFormEl = document.getElementById("loginForm");
-// console.log(loginFormEl);
+const registerSectionEl = document.getElementById("registerSectionSpan");
+const imgSectionEl = document.getElementById("imgSection");
+const loginSectionHiddenDivEl = document.getElementById("loginSectionHidden");
+const loginSectionHiddenSpanEl = document.getElementById(
+  "loginSectionHiddenSpan"
+);
+const imgSectionSpanEl = document.getElementById("imgSectionSpan")
+console.log(registerSectionEl);
 
+registerSectionEl.addEventListener("click", () => {
+  registerNav.classList.replace("hidden", "block");
+  imgSectionEl.classList.add("hidden");
+  loginSectionHiddenDivEl.classList.add("hidden");
+  console.log("hi");
+});
+
+loginSectionHiddenSpanEl.addEventListener("click",()=>{
+  imgSectionEl.classList.add("hidden");
+  loginSectionHiddenDivEl.classList.replace("hidden", "block")
+  registerNav.classList.add("hidden");
+})
+
+imgSectionSpanEl.addEventListener("click",()=>{
+  imgSectionEl.classList.replace("hidden", "block");
+  registerNav.classList.add("hidden");
+  loginSectionHiddenDivEl.classList.add("hidden");
+})
 const validation = new JustValidate(registerFormEl);
 const validator = new JustValidate(loginFormEl);
 
@@ -96,9 +122,10 @@ validation.onSuccess(() => {
 
     localStorage.setItem(localKey, JSON.stringify(newData));
   }
-  alert("submitted successfully!");
+  alert("Registered successfully!");
 
   registerFormEl.reset();
+  registerNav.classList.add("hidden");
 });
 
 const localStorageValue = JSON.parse(localStorage.getItem("personData"));
@@ -128,48 +155,6 @@ validator.addField("#remember", [
   },
 ]);
 
-validator.onSuccess(() => {
-  const emailEl = document.getElementById("email").value;
-  const passwordEl = document.getElementById("password").value;
-
-  const findUserData = localStorageValue.find((value) => {
-    // console.log(value);
-    return (
-      value.registerEmail == emailEl && value.registerPassword == passwordEl
-    );
-  });
-
-  const loginSectionHiddenDivEl = document.getElementById(
-    "loginSectionHiddenDiv"
-  );
-  const noteSectionEl = document.getElementById("noteSection");
-  if (findUserData) {
-    loginSectionHiddenDivEl.classList.replace("block", "hidden");
-    noteSectionEl.classList.replace("hidden", "block");
-  } else {
-    alert("Incorrect username and password! Please check your value!");
-    loginFormEl.reset();
-  }
-});
-
-const loginHereEl = document.getElementById("loginHere");
-// console.log(loginHereEl);
-const registerNav = document.getElementById("registerSection");
-const loginSectionHiddenEl = document.getElementById("loginSectionHidden");
-
-loginHereEl.addEventListener("click", () => {
-  loginSectionHiddenEl.classList.add("hidden", "block");
-  registerNav.classList.add("hidden");
-});
-
-const signUpEl = document.getElementById("signUp");
-// console.log(signUpEl);
-
-signUpEl.addEventListener("click", () => {
-  loginSectionHiddenEl.classList.add("hidden");
-  registerNav.classList.replace("hidden", "block");
-});
-
 const API = "https://ipv4.icanhazip.com";
 const getIP = async () => {
   const fetchURL = await fetch(API);
@@ -178,11 +163,55 @@ const getIP = async () => {
 };
 
 const fetchData = await getIP();
-// console.log(fetchData);
 
-const ipSectionSpanEl = document.getElementById("ipSectionSpan");
-const clickHereBtn = document.getElementById("clickHere");
+validator.onSuccess(() => {
+  const emailEl = document.getElementById("email").value;
+  const passwordEl = document.getElementById("password").value;
+  console.log(fetchData);
 
-clickHereBtn.addEventListener("click", () => {
-  ipSectionSpanEl.innerText = fetchData;
+  const findUserData = localStorageValue.find((value) => {
+    // console.log(value);
+    return (
+      value.registerEmail == emailEl && value.registerPassword == passwordEl
+    );
+  });
+
+  const loginSectionHiddenDivEl = document.getElementById("loginSectionHidden");
+  const noteSectionEl = document.getElementById("noteSection");
+  const tableHeadOneEl = document.getElementById("tableHeadOne");
+  const tableHeadTwoEl = document.getElementById("tableHeadTwo");
+  const ipSectionSpanEl = document.getElementById("ipSectionSpan");
+
+  const dateTime = new Date();
+  if (findUserData) {
+    // loginSectionHiddenDivEl.classList.replace("block", "hidden");
+    // noteSectionEl.classList.replace("hidden", "block");
+    ipSectionSpanEl.innerText = fetchData;
+    tableHeadOneEl.innerText = `${emailEl}`;
+    tableHeadTwoEl.innerText = `${dateTime}`;
+    loginSectionHiddenDivEl.classList.add("hidden");
+    registerNav.classList.add("hidden");
+    noteSectionEl.classList.replace("hidden", "block")
+  } else {
+    alert("Incorrect username and password! Please check your value!");
+    loginFormEl.reset();
+  }
 });
+
+// const loginHereEl = document.getElementById("loginHere");
+// // console.log(loginHereEl);
+
+// const loginSectionHiddenEl = document.getElementById("loginSectionHidden");
+
+// loginHereEl.addEventListener("click", () => {
+//   loginSectionHiddenEl.classList.add("hidden", "block");
+//   registerNav.classList.add("hidden");
+// });
+
+// const signUpEl = document.getElementById("signUp");
+// // console.log(signUpEl);
+
+// signUpEl.addEventListener("click", () => {
+//   loginSectionHiddenEl.classList.add("hidden");
+//   registerNav.classList.replace("hidden", "block");
+// });
