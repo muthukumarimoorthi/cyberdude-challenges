@@ -8,21 +8,36 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body class="bg-[#332941]">
-    <section class="flex items-center justify-center mt-3">
-      <button id="hiddenbtn" class="bg-[#714bb8] px-4 py-2 text-slate-100 rounded-lg">Register</button>
+    <section
+      class="flex items-center justify-end mt-3 space-x-4 max-w-7xl mx-auto"
+    >
+      <button
+        id="loginHiddenbtn"
+        class="bg-[#714bb8] px-4 py-2 text-slate-100 rounded-lg"
+      >
+        <a href="loginSection">Login</a>
+      </button>
+      <button
+        id="registerHiddenbtn"
+        class="bg-[#714bb8] px-4 py-2 text-slate-100 rounded-lg"
+      >
+        <a href="">Register</a>
+      </button>
     </section>
-
-    <section class="max-w-lg bg-slate-100 rounded-lg mx-auto mt-10 mb-20">
-      <div class="bg-[#714bb8] text-center rounded-t-lg p-6 space-y-4 md:space-y-6 sm:p-8">
-        <h1
-          class="text-xl font-bold leading-tight tracking-tight text-slate-100 md:text-2xl"
-        >
+    <section
+      id="registerSection"
+      class="max-w-lg bg-slate-100 rounded-lg mx-auto mt-10 mb-20"
+    >
+      <div
+        class="bg-[#714bb8] text-center rounded-t-lg p-6 space-y-4 md:space-y-6 sm:p-8"
+      >
+        <h1 class="text-xl font-bold text-slate-100 md:text-2xl">
           Create and account
         </h1>
       </div>
       <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
         <!-- H1 Div -->
-        
+
         <!-- Form Start -->
         <form id="registerForm">
           <div class="space-y-4 md:space-y-6">
@@ -33,8 +48,9 @@
                 >Full name</label
               >
               <input
-                type="fullName"
+                type="text"
                 id="fullName"
+                name="fullName"
                 class="bg-gray-50 border-2 border-gray-300 text-[#332941] sm:text-sm rounded-lg w-full p-2.5 placeholder-gray-400 outline-none focus:shadow-md focus:border-[#714bb8]"
                 placeholder="Abi Thetchana"
                 required=""
@@ -42,14 +58,14 @@
             </div>
             <div>
               <label
-                for="email"
+                for="registerEmail"
                 class="block mb-2 text-sm font-medium text-gray-900"
                 >Email</label
               >
               <input
                 type="email"
-                name="email"
-                id="email"
+                name="registerEmail"
+                id="registerEmail"
                 class="bg-gray-50 border-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg w-full p-2.5 placeholder-gray-400 outline-none focus:shadow-md focus:border-[#714bb8]"
                 placeholder="abithetcha123@gmail.com"
                 required=""
@@ -57,14 +73,14 @@
             </div>
             <div>
               <label
-                for="password"
+                for="registerPassword"
                 class="block mb-2 text-sm font-medium text-[#332941]"
                 >Password</label
               >
               <input
                 type="password"
-                name="password"
-                id="password"
+                name="registerPassword"
+                id="registerPassword"
                 placeholder="••••••••"
                 class="bg-gray-50 border-2 border-gray-300 text-[#332941] sm:text-sm rounded-lg w-full p-2.5 placeholder-gray-400 outline-none focus:shadow-md focus:border-[#714bb8]"
                 required=""
@@ -89,35 +105,34 @@
               <div class="flex items-center h-5">
                 <input
                   id="terms"
+                  name="terms"
                   type="checkbox"
                   class="w-4 h-4 border border-gray-300 rounded bg-[#714bb8] focus:ring-3 focus:bg-[#714bb8]"
                   required=""
                 />
               </div>
               <div class="ml-3 text-sm">
-                <label
-                  for="terms"
-                  class="font-normal text-[#332941]"
+                <label for="terms" class="font-normal text-[#332941]"
                   >I accept the
-                  <a
-                    class="font-medium text-[#714bb8] hover:underline"
-                    href="#"
+                  <a class="font-medium text-[#714bb8] hover:underline" href="#"
                     >Terms and Conditions</a
                   ></label
                 >
               </div>
             </div>
             <button
-              type="submit" id="btn"
-              class="w-full text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-[#714bb8]"
+              type="submit"
+              id="btn"
+              class="w-full text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-[#714bb8] hover:bg-[#583992]"
             >
               Create an account
             </button>
             <p class="text-sm font-normal text-[#332941]">
               Already have an account?
               <a
-                href="#"
+                href="#loginSectionHidden"
                 class="font-semibold text-[#714bb8] hover:underline"
+                id="loginHere"
                 >Login here</a
               >
             </p>
@@ -125,7 +140,168 @@
         </form>
       </div>
     </section>
+    <section class="" id="loginSectionHidden">
+      <div class="">
+        <div
+          class="flex flex-col items-center justify-center px-6 mx-auto md:h-screen lg:py-0"
+        >
+          <!-- <a
+          href="#"
+          class="flex items-center mb-6 text-2xl font-semibold text-gray-100"
+        >
+          YUniversity
+        </a> -->
+          <div
+            class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0"
+          >
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+              <h1 class="text-xl font-bold text-gray-900 md:text-2xl">
+                Sign in to your account
+              </h1>
+              <form class="space-y-4 md:space-y-6" id="loginForm">
+                <div>
+                  <label
+                    for="email"
+                    class="block mb-2 text-sm font-medium text-gray-900"
+                    >Your email</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="bg-gray-50 border-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg outline-none block w-full p-2.5 focus:border-[#714bb8] focus:shadow-lg"
+                    placeholder="abithetchana@gmail.com"
+                    required=""
+                  />
+                </div>
+                <div>
+                  <label
+                    for="password"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="••••••••"
+                    class="bg-gray-50 border-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg outline-none block w-full p-2.5 focus:border-[#714bb8] focus:shadow-lg"
+                    required=""
+                  />
+                </div>
+                <div class="flex items-center justify-between">
+                  <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                      <input
+                        id="remember"
+                        name="remember"
+                        type="checkbox"
+                        class="w-4 h-4 border border-gray-300 rounded bg-[#714bb8]"
+                        required=""
+                      />
+                    </div>
+                    <div class="ml-3 text-sm">
+                      <label
+                        for="remember"
+                        class="text-gray-500 font-normal text-sm"
+                        >Remember me</label
+                      >
+                    </div>
+                  </div>
+                  <!-- <a
+                  href="#"
+                  class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
+                  >Forgot password?</a
+                > -->
+                </div>
+                <button
+                  type="submit"
+                  id="singnInBtn"
+                  class="w-full text-white bg-primary-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-[#714bb8] hover:bg-[#58359a]"
+                >
+                  Sign in
+                </button>
+                <p class="text-sm font-normal text-gray-500">
+                  Don’t have an account yet?
+                  <a
+                    href="#registerSection"
+                    class="font-medium text-[#714bb8]"
+                    id="signUp"
+                    >Sign up</a
+                  >
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-lg mx-auto" id="noteSection">
+      <div
+        class="bg-slate-50 p-10 rounded-lg flex flex-col items-center space-y-5"
+      >
+        <span class="text-[#714bb8] animate-bounce"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="60"
+            height="60"
+            viewBox="0 0 36 36"
+          >
+            <path
+              fill="currentColor"
+              d="M18 2a16 16 0 1 0 16 16A16 16 0 0 0 18 2m10.45 10.63L15.31 25.76L7.55 18a1.4 1.4 0 0 1 2-2l5.78 5.78l11.14-11.13a1.4 1.4 0 1 1 2 2Z"
+              class="clr-i-solid clr-i-solid-path-1"
+            />
+            <path fill="none" d="M0 0h36v36H0z" /></svg
+        ></span>
+        <span class="text-4xl font-normal text-[#714bb8] animate-pulse"
+          >Login Successful!</span
+        >
+        <div class="flex flex-col items-center">
+          <span class="text-base font-medium px-10"
+            >You have successfully singed into account.</span
+          >
+          <span class="text-base font-medium px-10">Your login history!</span>
+        </div>
+        <button
+          class="bg-[#714bb8] px-4 py-2 rounded-lg text-slate-50 hover:bg-[#482f75]"
+        >
+          <a href="#ipSection" id="clickHere">Click Here>>></a>
+        </button>
+      </div>
+    </section>
+    <section id="ipSection" class="max-w-2xl mx-auto">
+      <div class="bg-slate-100 rounded-lg py-4 px-4 my-20 space-y-4">
+        <div class="flex flex-col items-center">
+          <div><h1 class="text-2xl font-bold text-slate-800"></h1></div>
+          <div
+            class="py-5 bg-[#714bb8] text-slate-100 w-full text-5xl font-bold rounded-lg text-center"
+          >
+            <span>LOGIN IP : <span id="ipSectionSpan"></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-2xl mx-auto my-10 bg-slate-100 rounded-lg">
+      <div class="rounded-lg px-5 pt-5">
+        <table class="w-full text-sm rounded-lg">
+          <thead class="text-xs text-gray-50 uppercase  bg-[#714bb8]">
+            <tr class="">
+              <th class="px-6 py-3">User ID</th>
+              <th class="px-6 py-3">Time</th>
+            </tr>
+          </thead>
+          <tbody class="bg-slate-100">
+            <tr>
+              <th class="px-6 py-3">abithetcha@gmail.com</th>
+              <th class="px-6 py-3">10:10 PM</th>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    </section>
+
+    <!-- <script type="module" src="./assets/js/register.js"></script> -->
     <script type="module" src="./assets/js/main.js"></script>
-    <!-- <script type="module" src="./assets/js/login.js"></script> -->
   </body>
 </html>
