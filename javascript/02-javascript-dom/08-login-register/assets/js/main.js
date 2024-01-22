@@ -126,6 +126,7 @@ validation.onSuccess(() => {
 
   registerFormEl.reset();
   registerNav.classList.add("hidden");
+  imgSectionEl.classList.replace("hidden", "block");
 });
 
 const localStorageValue = JSON.parse(localStorage.getItem("personData"));
