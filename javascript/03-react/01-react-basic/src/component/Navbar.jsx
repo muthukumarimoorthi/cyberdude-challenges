@@ -6,12 +6,12 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <header className="flex item-center justify-between px-5 py-3 bg-blue-500 text-white">
+      <header className="flex items-center justify-between font-roboto px-5 py-3 bg-slate-800 text-white border-b-2">
         <div>
-         <h1> Abi's</h1>
+         <h1 className="text-5xl font-caveat font-black "> NotifyMe</h1>
         </div>
         <div>
-        <ul className="flex space-x-2 items-center">
+        <ul className="flex space-x-6 pr-5 items-center text-base font-medium">
           <li>Home</li>
           <li>About</li>
           <li>Contact</li>
