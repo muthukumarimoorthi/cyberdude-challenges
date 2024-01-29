@@ -49,7 +49,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-slate-950 hover:bg-slate-900"
+            class="py-3 px-5 text-sm font-bold text-center text-white rounded-lg bg-slate-700 hover:bg-slate-950"
           >
             Send message
           </button>

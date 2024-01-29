@@ -21,10 +21,10 @@ const Homepage = () => {
                 <span className="text-blue-500 font-normal text-base">
                   #cyberdude_internship #cyberdude #fullstack_engineer{" "}
                 </span>
-                🖊 Project description I was assigned with the project by
+                🖊 Project description I was assigned with the project by{" "}   
                 <span className="text-blue-500 font-normal text-base">
-                  CyberDude Networks Private Limited
-                </span>{" "}
+                  CyberDude Networks Private Limited {" "}
+                </span>
                 to create a
                 <span className="text-blue-500 hover:underline"> more...</span>{" "}
               </p>
@@ -107,7 +107,7 @@ const Homepage = () => {
                   Muhammed Shajid{" "}
                 </span>
                 posted: 🚀 JS DOM Project - WorkRemote (HTML, Tailwind CSS,
-                JavaScript, Vite) - This project assigned by the company
+                JavaScript, Vite) - This project assigned by the company {" "}
                 <span className="text-blue-500 font-normal text-base">
                   CyberDude Networks Private Limited
                 </span>{" "}
@@ -251,7 +251,7 @@ const Homepage = () => {
               </p>
             </div>
             <div>
-              <span className="text-xs">12h</span>
+              <span className="text-xs">23h</span>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
