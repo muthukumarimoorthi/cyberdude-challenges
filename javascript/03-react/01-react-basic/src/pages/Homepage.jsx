@@ -1,4 +1,5 @@
 import React from "react";
+import PersonOne from "../persons/PersonOne";
 
 const Homepage = () => {
   return (
@@ -26,7 +27,7 @@ const Homepage = () => {
                   CyberDude Networks Private Limited {" "}
                 </span>
                 to create a
-                <span className="text-blue-500 hover:underline"> more...</span>{" "}
+                <span className="text-blue-500 hover:underline"><a href="/personOne">more...</a></span>{" "}
               </p>
             </div>
             <div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const PersonOne = () => {
+const PersonTwo = () => {
   return (
     <section>
       <div className="max-w-2xl mx-auto bg-slate-700 rounded my-10 px-5 py-5">
@@ -184,4 +184,4 @@ const PersonOne = () => {
   );
 };
 
-export default PersonOne;
+export default PersonTwo;
