@@ -25,6 +25,10 @@ const router = createBrowserRouter([
         path: "/contact",
         element : <Contact />
     },
+    {
+        path:"/abi/post",
+        element: <PersonOne />
+    }
 ]
    }
 ])

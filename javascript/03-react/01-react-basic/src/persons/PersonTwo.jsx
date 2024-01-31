@@ -8,22 +8,38 @@ const PersonTwo = () => {
           <div className="flex items-center space-x-3">
             <div>
               <img
-                src="https://media.licdn.com/dms/image/D5635AQG-1qz6lthNKQ/profile-framedphoto-shrink_400_400/0/1705918214896?e=1707199200&v=beta&t=A6UlFBCHBLdbkxWeE_PXA5sIayXLMMR4YtEVIqMP9uQ"
+                src="https://media.licdn.com/dms/image/D4E03AQGc3mX11klLEw/profile-displayphoto-shrink_400_400/0/1698336785076?e=1712188800&v=beta&t=3xwka935R6gRWA6bwyDzWvlGjIDy5O3AK_AqAXGsla0"
                 alt="muthukumari.img"
                 className="w-16 rounded-full"
               />
             </div>
             <div className="tracking-wider flex flex-col">
-              <div className="flex">
+              <div className="flex space-x-1">
                 <div className="flex flex-col">
-                  <span className="text-slate-100 font-normal text-base">
-                    Muthukumari M{" "}
-                  </span>
+                 <div className="flex">
+                 <span className="text-slate-100 font-normal text-base">
+                    Mohamed Mushkir{" "}</span>
+                    <span><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M144 128a16 16 0 1 1-16-16a16 16 0 0 1 16 16"
+                      />
+                    </svg></span>
+                  
+                  <span className="text-slate-400"> 1st</span>
+
+                 </div>
                   <span className="text-slate-400 text-xs">
-                    Full Stack Engineer
+                    PHP Developer | Intern Full Stack Engineer | MERN |
+                    CyberDude Networks
                   </span>
                   <div className="flex items-center">
-                    <span className="text-slate-400 text-xs">6d</span>
+                    <span className="text-slate-400 text-xs">1w</span>
                     <span className="text-slate-400">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -52,21 +68,9 @@ const PersonTwo = () => {
                     </span>
                   </div>
                 </div>
-                <span className="text-slate-400"> (She/Her)</span>
-                <span className="text-slate-400">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M144 128a16 16 0 1 1-16-16a16 16 0 0 1 16 16"
-                    />
-                  </svg>
-                </span>
-                <span className="text-slate-400"> You</span>
+                
+
+               
               </div>
             </div>
           </div>
@@ -93,20 +97,45 @@ const PersonTwo = () => {
         <div className="flex flex-col space-y-5">
           <span className="text-sm text-slate-200">
             {" "}
-            🚀 Project # 7 – Google Meet UI Clone Challenge With Tailwind CSS
+            🚀 Exciting Alert! 🚀
           </span>
           <span className="text-sm text-blue-500 space-x-1">
-           <a href="https://www.linkedin.com/company/cyberdude-networks/" target="blank" className="hover:underline">#cyberdude_internship </a> <a href="https://www.linkedin.com/company/cyberdude-networks/" target="blank" className="hover:underline">#cyberdude </a>
-           <a href="" target="blank" className="hover:underline">#fullstack_engineer </a>
+            <a
+              href="https://www.linkedin.com/company/cyberdude-networks/"
+              target="blank"
+              className="hover:underline"
+            >
+              #cyberdude_internship{" "}
+            </a>{" "}
+            <a
+              href="https://www.linkedin.com/company/cyberdude-networks/"
+              target="blank"
+              className="hover:underline"
+            >
+              #cyberdude{" "}
+            </a>
+            <a href="" target="blank" className="hover:underline">
+              #fullstack_engineer{" "}
+            </a>
           </span>
-          <span className="text-sm text-slate-200">🖊 Project description</span>
+          <span className="text-sm text-slate-200">Thrilled to share that I've embarked on a fantastic journey to enhance my UI design skills during my 6-month Fullstack Engineer internship at CyberDude Networks Private Limited! 🌐💻</span>
           <span className="text-sm text-slate-200">
-            I was assigned with the project by <span className=" text-blue-500 hover:underline"><a href="https://www.linkedin.com/company/cyberdude-networks/">CyberDude Networks Private
-            Limited</a></span> to create a Google Meet UI by using the simple HTML and
-            Tailwind CSS. The Project is to create a build a lookalike Google
-            Meet UI. (This is also Mobile responsive). This was the first UI
-            challenge assigned to me by Mentor
-            <span className=" text-blue-500 hover:underline"><a href="https://www.linkedin.com/in/anburocky3/"> Anbuselvan Annamalai</a></span>
+            I was assigned with the project by{" "}
+            <span className=" text-blue-500 hover:underline">
+              <a href="https://www.linkedin.com/company/cyberdude-networks/">
+                CyberDude Networks Private Limited
+              </a>
+            </span>{" "}
+            to create a Google Meet UI by using the simple HTML and Tailwind
+            CSS. The Project is to create a build a lookalike Google Meet UI.
+            (This is also Mobile responsive). This was the first UI challenge
+            assigned to me by Mentor
+            <span className=" text-blue-500 hover:underline">
+              <a href="https://www.linkedin.com/in/anburocky3/">
+                {" "}
+                Anbuselvan Annamalai
+              </a>
+            </span>
           </span>
           <span className="text-sm text-slate-200">⌨ Features</span>
           <span className="text-sm text-slate-200">
@@ -147,37 +176,107 @@ const PersonTwo = () => {
               work with HTML.
             </span>
           </div>
-          <span className="text-sm text-slate-200">Unlocked skills during this project - <span className="text-blue-500 space-x-1">
-            <a href="#" className="hover:underline">#TailwindCSS</a> 
-            <a href="" className="hover:underline">#CSS_Positioning</a> 
-            <a href="" className="hover:underline">#Vite</a> 
-            <a href="" className="hover:underline">#Gmeet</a></span></span>
+          <span className="text-sm text-slate-200">
+            Unlocked skills during this project -{" "}
+            <span className="text-blue-500 space-x-1">
+              <a href="#" className="hover:underline">
+                #TailwindCSS
+              </a>
+              <a href="" className="hover:underline">
+                #CSS_Positioning
+              </a>
+              <a href="" className="hover:underline">
+                #Vite
+              </a>
+              <a href="" className="hover:underline">
+                #Gmeet
+              </a>
+            </span>
+          </span>
           <div className="flex flex-col">
-          <span className="text-sm text-slate-200">⚡GitHub Repo : <span className="text-blue-500 hover:underline"><a href="https://github.com/muthukumarimoorthi/gmeet-clone-challenge" target="blank">https://lnkd.in/g7S_ZqE3</a></span></span>
-          <span className="text-sm text-slate-200">⚡GitHub Live : <a href="https://muthukumarimoorthi.github.io/gmeet-clone-challenge/" className="text-blue-500 hover:underline" target="blank">https://lnkd.in/gjUH_GjG</a></span>
-          <span className="text-sm text-slate-200">⚡GitHub profile : <a href="https://github.com/muthukumarimoorthi" className="text-blue-500 hover:underline" target="blank">https://lnkd.in/gr_WfbN5</a></span>
-
+            <span className="text-sm text-slate-200">
+              ⚡GitHub Repo :{" "}
+              <span className="text-blue-500 hover:underline">
+                <a
+                  href="https://github.com/muthukumarimoorthi/gmeet-clone-challenge"
+                  target="blank"
+                >
+                  https://lnkd.in/g7S_ZqE3
+                </a>
+              </span>
+            </span>
+            <span className="text-sm text-slate-200">
+              ⚡GitHub Live :{" "}
+              <a
+                href="https://muthukumarimoorthi.github.io/gmeet-clone-challenge/"
+                className="text-blue-500 hover:underline"
+                target="blank"
+              >
+                https://lnkd.in/gjUH_GjG
+              </a>
+            </span>
+            <span className="text-sm text-slate-200">
+              ⚡GitHub profile :{" "}
+              <a
+                href="https://github.com/muthukumarimoorthi"
+                className="text-blue-500 hover:underline"
+                target="blank"
+              >
+                https://lnkd.in/gr_WfbN5
+              </a>
+            </span>
           </div>
           <div className="flex flex-col">
-          <span className="text-sm text-slate-200">I am very thankful to Anbuselvan Annamalai (My Mentor).</span>
-          <span className="text-sm text-slate-200">Special thanks to Muhammed Shajid for helping me with this Project.</span>
-          <span className="text-sm text-slate-200">Special thanks to Vijayavedhasekaran K for helping me with making the UI responsive.</span>
+            <span className="text-sm text-slate-200">
+              I am very thankful to Anbuselvan Annamalai (My Mentor).
+            </span>
+            <span className="text-sm text-slate-200">
+              Special thanks to Muhammed Shajid for helping me with this
+              Project.
+            </span>
+            <span className="text-sm text-slate-200">
+              Special thanks to Vijayavedhasekaran K for helping me with making
+              the UI responsive.
+            </span>
           </div>
-          
-          <span className="text-sm text-slate-200">Please share your thoughts on this in the comment section or DM. Your thoughts and feedbacks are much appreciated.</span> 
-         
-  
-          <a href="https://lnkd.in/gr_WfbN5"><img src="https://i.ibb.co/SfbPtV4/Screenshot-2023-10-14-162215.png" alt="Screenshot-2023-10-14-162215" border="0"/></a>
 
-         <div className="flex justify-between items-center">
-         <div className="flex space-x-3">
-          <div className="flex"><img src="https://www.userflow.nl/images/Linkedin-Support-Icon-HeartinHand500.png" className="w-5 h-5" alt="like" />
-          <img src="https://www.userflow.nl/images/Linkedin-Love-Icon-Heart500.png" className="w-5 h-5" alt="love" /></div>
-          <span className="text-xs text-slate-300"> Vijayavedhasekaran K adnd 46 others</span>
+          <span className="text-sm text-slate-200">
+            Please share your thoughts on this in the comment section or DM.
+            Your thoughts and feedbacks are much appreciated.
+          </span>
+
+          <a href="https://lnkd.in/gr_WfbN5">
+            <img
+              src="https://i.ibb.co/SfbPtV4/Screenshot-2023-10-14-162215.png"
+              alt="Screenshot-2023-10-14-162215"
+              border="0"
+            />
+          </a>
+
+          <div className="flex justify-between items-center">
+            <div className="flex space-x-3">
+              <div className="flex">
+                <img
+                  src="https://www.userflow.nl/images/Linkedin-Support-Icon-HeartinHand500.png"
+                  className="w-5 h-5"
+                  alt="like"
+                />
+                <img
+                  src="https://www.userflow.nl/images/Linkedin-Love-Icon-Heart500.png"
+                  className="w-5 h-5"
+                  alt="love"
+                />
+              </div>
+              <span className="text-xs text-slate-300">
+                {" "}
+                Vijayavedhasekaran K adnd 46 others
+              </span>
+            </div>
+            <div>
+              {" "}
+              <span className="text-xs text-slate-300">6 comments</span>
+            </div>
           </div>
-          <div> <span className="text-xs text-slate-300">6 comments</span></div>
-         </div>
-
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import React from "react";
 import PersonOne from "../persons/PersonOne";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -27,7 +28,8 @@ const Homepage = () => {
                   CyberDude Networks Private Limited {" "}
                 </span>
                 to create a
-                <span className="text-blue-500 hover:underline"><a href="/personOne">more...</a></span>{" "}
+
+                <Link className="text-blue-500 hover:underline" to={"/abi/post"}>more...</Link>{" "}
               </p>
             </div>
             <div>

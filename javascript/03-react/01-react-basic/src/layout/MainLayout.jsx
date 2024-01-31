@@ -3,6 +3,7 @@ import Navbar from "../component/Navbar";
 import Homepage from "../pages/Homepage";
 import React from "react";
 import PersonTwo from "../persons/PersonTwo";
+import PersonOne from "../persons/PersonOne";
 
 
 const MainLayout = ()=> {
@@ -10,9 +11,7 @@ const MainLayout = ()=> {
         <div>
 
             <Navbar />
-            <PersonTwo/>
-        
-           {/* <Outlet/> */}
+           <Outlet/>
         </div>
     )
 }
