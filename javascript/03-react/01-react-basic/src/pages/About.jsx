@@ -10,7 +10,7 @@ const About = () => {
           class="w-full h-full"
         />
       </div>
-      <div className="p-6 bg-slate-800">
+      <div className="p-6">
         <h6 className="block font-sans text-4xl font-semibold  text-gray-100 uppercase">
           Muthukumari M
         </h6>

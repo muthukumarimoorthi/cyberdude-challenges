@@ -1,0 +1,61 @@
+[
+  {
+    "image": "https://media.licdn.com/dms/image/D5603AQHVnV-QApQlhg/profile-displayphoto-shrink_400_400/0/1705918213009?e=1712188800&v=beta&t=Ur5Bad2Gqd3M9-4dQOcGDs0YeMVPqbd365RA47yN6dk",
+    "name": "Muthukumari (Abirami) M",
+    "pronouns": "(She/Her)",
+    "position": "Full Stack Engineer",
+    "place": "Chennai, Tamil Nadu, India",
+    "about": [
+      "As a Full Stack Developer I am working with a team as an Intern, where I learned and sharpen my skill and learned to adapt to different scenarios. I am eager to learn type and can handle a pressure to meet the deadline.",
+      "My Passion to Full Stack Developer begin when I was just surfing through a website. I was eager to know “How a person can design a site that can handle people and provide with the information of what they want”. I Started to learn about the web development process and I soon decided to take the path of a Full Stack Developer.",
+      "I started my path with a small steps with self-learning through books and videos. Then I started taking classes and then made through to be an Intern. I developed my skill as an front-end and back-end developer so that I can design a website that people can use.",
+      "I am eagerly waiting to join a team where I can show case my skill and grow more along with the team, waiting to take on the challenges on the project."
+    ],
+"education":[{
+        "educationImage":"https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip",
+        "schoolOrCollege": "Arumugam Pillai Seethai Ammal College of Education",
+        "degree":"Bachelor of Science - BSC · Information Technology",
+        "educationYears":"Jul 2015 - Apr 2018"
+
+}],
+
+    "experience": [
+      {
+        "companyImg": "https://media.licdn.com/dms/image/D560BAQFI_zxYO6fHfQ/company-logo_200_200/0/1690363278468/cyberdude_networks_logo?e=1714608000&v=beta&t=OZ7FrOTg3JpMcmHeyFyPeJGkEYZzi-770NjDEG_I-vU",
+        "jobRole": "Full Stack Engineer",
+        "companyName": "CyberDude Networks Private Limited",
+        "experienceYear": "Sep 2023 - Present · 5 mos",
+        "location": "Chennai, Tamil Nadu, India"
+      },
+      {
+        "companyImg": "https://media.licdn.com/dms/image/C4D0BAQE16XC3c1QLcA/company-logo_200_200/0/1630468017897/situsamc_logo?e=1714608000&v=beta&t=J73q_t0PM5xUHqmFvYRHfXjVY0l-ZrEh0OfpBSYhdBQ",
+        "position": "Title Examiner",
+        "companyName": "SitusAMC · Full-time",
+        "experienceYear": "Dec 2018 - Oct 2023 · 4 yrs 11 mos",
+        "location": "Chennai, Tamil Nadu, India"
+      }
+    ],
+    "projects": [
+        {
+            "projectNames": "Google Meet UI Clone Challenge",
+            "projectReview": "Google Meet UI by using the simple HTML and Tailwind CSS. The Project is to create a build a lookalike Google Meet UI. (This is also Mobile responsive).",
+            "urlLink":"https://muthukumarimoorthi.github.io/gmeet-clone-challenge"
+        },
+        {
+            "projectNames": "GPay UI Clone Challenge",
+            "projectReview": "GPay UI by using the simple HTML and Tailwind CSS. The Project is to create a build a lookalike GPay UI. (This is also Mobile responsive).",
+            "urlLink":"https://github.com/muthukumarimoorthi/GPay-UI-Challenge"
+        },
+        {
+            "projectNames": "WhatsApp UI Challenge",
+            "projectReview": "WhatsApp UI by using the simple HTML and Tailwind_CSS. The Project is to create a build a lookalike UI.",
+            "urlLink":"https://muthukumarimoorthi.github.io/whatsapp-ui-tailwind"
+        },
+        {
+            "projectNames": "Instagram UI Challenge",
+            "projectReview": "Instagram UI by using the simple HTML and Tailwind CSS. The Project is to create a build a lookalike Instagram UI. (This is also Mobile responsive).",
+            "urlLink":"https://muthukumarimoorthi.github.io/Instagram-UI-Tailwind"
+        }
+    ]
+  }
+]
