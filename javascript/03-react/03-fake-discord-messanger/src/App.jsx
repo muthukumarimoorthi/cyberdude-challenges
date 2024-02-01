@@ -42,6 +42,15 @@ const App = () => {
     setMutualServer(e.target.value);
   }
 
+  const [person1message, setPerson1message] = useState("Yov edhavuthu pesuya");
+  const setPerson1messageMethod =(e)=>{
+    setPerson1message(e.target.value)
+  }
+
+  const [person2message, setPerson2message] = useState ("Athavuthu ipo na ena solrathu")
+  const person2messageMethod = (e)=>{
+    setPerson2message(e.target.value)
+  }
   return (
     <section>
       <section className="grid sm:grid-cols-2 sm:m-10 m-2 md:m-4">
@@ -191,7 +200,7 @@ const App = () => {
               id="person1message"
               rows="2"
               className="block p-2.5 w-full text-sm text-gray-50 bg-gray-50 bg-transparent focus:border-blue-800 rounded-lg border border-gray-300 outline-none"
-              placeholder="Write your thoughts here..."
+              placeholder="Write your thoughts here..." onChange={setPerson1messageMethod}
             ></textarea>
           </div>
           <div className="p-5">
@@ -205,7 +214,7 @@ const App = () => {
               id="person2message"
               rows="2"
               className="block p-2.5 w-full text-sm text-gray-50 bg-gray-50 bg-transparent focus:border-blue-800 rounded-lg border border-gray-300 outline-none"
-              placeholder="Write your thoughts here..."
+              placeholder="Write your thoughts here..." onChange={person2messageMethod}
             ></textarea>
           </div>
         </section>
@@ -390,7 +399,7 @@ const App = () => {
                 </div>
                 <div className="mx-11 rounded-lg">
                   <span className="text-xs">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  {person1message != "" ? person1message : "Yov edhavuthu pesuya"}
                   </span>
                 </div>
               </div>
@@ -413,9 +422,7 @@ const App = () => {
                 </div>
                 <div className="mx-11 rounded-lg">
                   <span className="text-xs">
-                    Ipsum necessitatibus commodi excepturi sequi quos pariatur
-                    incidunt, ipsa optio soluta, inventore in error id odio
-                    doloremque perspiciatis. Totam ipsam ratione dolorum.
+                  {person2message != "" ? person2message : "Athavuthu ipo na ena solrathu"}
                   </span>
                 </div>
               </div>
