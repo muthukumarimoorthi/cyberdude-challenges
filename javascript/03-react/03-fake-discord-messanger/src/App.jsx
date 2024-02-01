@@ -1,4 +1,47 @@
+import { useState } from "react";
+
 const App = () => {
+  const [time, setTime] = useState("00:00");
+
+  const setTimeMethod = (e) => {
+    setTime(e.target.value);
+  };
+
+  const [name, setName] = useState("Person 1");
+  const setNameMethod = (e) => {
+    setName(e.target.value);
+  };
+
+  const [percent, setPercent] = useState("28");
+  const setPercentMethod = (e) => {
+    setPercent(e.target.value);
+  };
+
+  const [operator, setOperator] = useState("LTE");
+  const setOperatorMethod = (e) => {
+    setOperator(e.target.value);
+  };
+
+  const [date, setDate] = useState("dd-mm-yyyy");
+  const setDateMethod = (e) => {
+    setDate(e.target.value);
+  };
+
+  const [name2, setName2]=useState("Person 2");
+  const setNameMethod2=(e)=>{
+    setName2(e.target.value);
+  }
+
+  const [username, setUsername] =useState("username");
+  const setUsernameMethod =(e)=>{
+    setUsername(e.target.value);
+  }
+
+  const [mutualServer, setMutualServer] = useState("1");
+  const setMutualServerMethod = (e)=>{
+    setMutualServer(e.target.value);
+  }
+
   return (
     <section>
       <section className="grid sm:grid-cols-2 sm:m-10 m-2 md:m-4">
@@ -8,16 +51,17 @@ const App = () => {
             <div className="p-5">
               <label
                 htmlFor="time"
-                className="block mb-2 text-sm font-medium text-gray-50 "
-              >
-                Time
-              </label>
+                className="block mb-2 text-sm font-medium text-gray-50"
+              />
+              Time
               <input
                 type="time"
                 id="time"
                 className=" border-gray-400 text-gray-50 text-sm bg-transparent focus:border-blue-800 w-full p-2.5 outline-none border-b focus:shadow-lg fucus:shadow-blue-600"
                 placeholder="10:00 PM"
                 required
+                autoFocus
+                onChange={setTimeMethod}
               />
             </div>
             <div className="p-5">
@@ -32,6 +76,7 @@ const App = () => {
                 id="batteryPercent"
                 className=" border-gray-400 text-gray-50 text-sm bg-transparent focus:border-blue-800 w-full p-2.5 outline-none border-b focus:shadow-lg fucus:shadow-blue-600"
                 placeholder="28"
+                onChange={setPercentMethod}
                 required
               />
             </div>
@@ -49,6 +94,7 @@ const App = () => {
                 id="operator"
                 className=" border-gray-400 text-gray-50 text-sm bg-transparent focus:border-blue-800 w-full p-2.5 outline-none border-b focus:shadow-lg fucus:shadow-blue-600"
                 placeholder="5G / 4G / LTE"
+                onChange={setOperatorMethod}
                 required
               />
             </div>
@@ -64,6 +110,7 @@ const App = () => {
                 id="date"
                 className=" border-gray-400 text-gray-50 text-sm bg-transparent focus:border-blue-800 w-full p-2.5 outline-none border-b focus:shadow-lg fucus:shadow-blue-600"
                 placeholder="10:00 PM"
+                onChange={setDateMethod}
                 required
               />
             </div>
@@ -80,7 +127,8 @@ const App = () => {
                 type="text"
                 id="person1"
                 className=" border-gray-400 text-gray-50 text-sm bg-transparent focus:border-blue-800 w-full p-2.5 outline-none border-b focus:shadow-lg fucus:shadow-blue-600"
-                placeholder="Abi Thetchana"
+                placeholder="Ex: Abi Thetchana"
+                onChange={setNameMethod}
                 required
               />
             </div>
@@ -95,7 +143,7 @@ const App = () => {
                 type="text"
                 id="person2"
                 className=" border-gray-400 text-gray-50 text-sm bg-transparent focus:border-blue-800 w-full p-2.5 outline-none border-b focus:shadow-lg fucus:shadow-blue-600"
-                placeholder="Shajidkir"
+                placeholder="Shajidkir" onChange={setNameMethod2}
                 required
               />
             </div>
@@ -106,13 +154,13 @@ const App = () => {
                 htmlFor="userName"
                 className="block mb-2 text-sm font-medium text-gray-50 "
               >
-                Username
+               Person 1 Username
               </label>
               <input
                 type="text"
                 id="userName"
                 className=" border-gray-400 text-gray-50 text-sm bg-transparent focus:border-blue-800 w-full p-2.5 outline-none border-b focus:shadow-lg fucus:shadow-blue-600"
-                placeholder="abi_thetchana"
+                placeholder="abi_thetchana" onChange={setUsernameMethod}
                 required
               />
             </div>
@@ -128,7 +176,7 @@ const App = () => {
                 id="mutualServer"
                 className=" border-gray-400 text-gray-50 text-sm bg-transparent focus:border-blue-800 w-full p-2.5 outline-none border-b focus:shadow-lg fucus:shadow-blue-600"
                 placeholder="1 / 2 / 3"
-                required
+                required onChange={setMutualServerMethod}
               />
             </div>
           </div>
@@ -166,7 +214,7 @@ const App = () => {
           <div className="my-5 bg-black sm:max-w-md max-w-sm sm:mx-auto text-white rounded-lg mx-auto">
             <div className="max-w-md mx-auto flex justify-between px-3 py-1">
               <div>
-                <span className="text-xs font-semibold">10:00</span>
+                <span className="text-xs font-semibold">{time}</span>
               </div>
               <div className="flex items-center">
                 <span className="text-xs font-semibold">
@@ -182,7 +230,7 @@ const App = () => {
                     ></path>
                   </svg>
                 </span>
-                <span className="text-xs font-semibold">LTE </span>
+                <span className="text-xs font-semibold">{operator} </span>
 
                 <span className="text-xs font-semibold">
                   <svg
@@ -203,7 +251,8 @@ const App = () => {
                   </svg>
                 </span>
                 <span className="text-xs font-semibold">
-                  28<span>%</span>
+                  {percent}
+                  <span>%</span>
                 </span>
               </div>
             </div>
@@ -229,7 +278,9 @@ const App = () => {
                     className="w-12 h-12 rounded-full bg-white hover:bg-black"
                   />
                 </span>
-                <span className="text-sm font-semibold">Abi Thechana</span>
+                <span className="text-sm font-semibold capitalize">
+                  {name != "" ? name : "Person 1"}
+                </span>
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -284,13 +335,18 @@ const App = () => {
                   className="w-12 h-12 rounded-full bg-white hover:bg-black"
                 />
               </span>
-              <span className="text-lg font-bold pt-1">Abi Thetchana</span>
+              <span className="text-lg font-bold pt-1 capitalize">
+                {name != "" ? name : "Person 1"}
+              </span>
               <span className="text-sm font-semibold text-gray-400">
-                abi_thetchana
+                {username}
               </span>
               <span className="text-xs font-base text-gray-400">
                 This is the very beginning of your legendary conversation with{" "}
-                <span>Abi Thetchana</span>.
+                <span className="capitalize">
+                  {name != "" ? name : "Person 1"}
+                </span>
+                .
               </span>
               <div className="flex items-center space-x-2 py-3">
                 <span>
@@ -301,56 +357,68 @@ const App = () => {
                   />
                 </span>
                 <span className="text-xs font-base text-gray-400">
-                  <span>1</span> Mutual Server
+                  <span>{mutualServer}</span> Mutual Server
                 </span>
               </div>
             </div>
             <div className="grid grid-cols-3 items-center px-20">
               <hr className="border-gray-500 h-0.5 bg-gray-600 rounded-lg" />
               <span className="text-center text-xs font-semibold text-gray-500">
-                28/01/2024
+                {date}
               </span>
               <hr className="border-gray-500 h-0.5 bg-gray-600 rounded-lg" />
             </div>
             <div className="font pb-32">
-            <div className="py-4 px-5">
-              <div className=" font-semibold flex items-center space-x-2 text-gray-400">
-                <div>
-                  <span>
-                    <img
-                      src="https://cdn3.emoji.gg/emojis/4559-discord.png"
-                      alt="discord-avatar"
-                      className="w-9 h-9 rounded-full bg-white hover:bg-black"
-                    />
+              <div className="py-4 px-5">
+                <div className=" font-semibold flex items-center space-x-2 text-gray-400">
+                  <div>
+                    <span>
+                      <img
+                        src="https://cdn3.emoji.gg/emojis/4559-discord.png"
+                        alt="discord-avatar"
+                        className="w-9 h-9 rounded-full bg-white hover:bg-black"
+                      />
+                    </span>
+                  </div>
+                  <div className="text-xs flex items-center space-x-1">
+                    <span className="capitalize">
+                      {name != "" ? name : "Person 1"}{" "}
+                    </span>
+                    <span> {date}</span>
+                    <span>12:45</span>
+                  </div>
+                </div>
+                <div className="mx-11 rounded-lg">
+                  <span className="text-xs">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   </span>
                 </div>
-                <div className="text-xs flex items-center space-x-1">
-                  <span>Abi Thetchana </span>
-                  <span> 28/01/2024</span>
-                  <span>12:45</span>
-                </div>
               </div>
-              <div className="mx-11 rounded-lg"><span className="text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span></div>
-            </div>
-            <div className="pb-5 px-5">
-              <div className=" font-semibold flex items-center space-x-2 text-gray-400">
-                <div>
-                  <span>
-                    <img
-                      src="https://i.pinimg.com/564x/31/f1/23/31f1231af69beb6617062dbf3373131c.jpg"
-                      alt="discord-avatar"
-                      className="w-9 h-9 rounded-full bg-white hover:bg-black"
-                    />
+              <div className="pb-5 px-5">
+                <div className=" font-semibold flex items-center space-x-2 text-gray-400">
+                  <div>
+                    <span>
+                      <img
+                        src="https://i.pinimg.com/564x/31/f1/23/31f1231af69beb6617062dbf3373131c.jpg"
+                        alt="discord-avatar"
+                        className="w-9 h-9 rounded-full bg-white hover:bg-black"
+                      />
+                    </span>
+                  </div>
+                  <div className="text-xs flex items-center space-x-1">
+                    <span className="capitalize">{name2 != "" ? name2 : "Person 2"}</span>
+                    <span> {date}</span>
+                    <span>12:45</span>
+                  </div>
+                </div>
+                <div className="mx-11 rounded-lg">
+                  <span className="text-xs">
+                    Ipsum necessitatibus commodi excepturi sequi quos pariatur
+                    incidunt, ipsa optio soluta, inventore in error id odio
+                    doloremque perspiciatis. Totam ipsam ratione dolorum.
                   </span>
                 </div>
-                <div className="text-xs flex items-center space-x-1">
-                  <span>Shajidkir </span>
-                  <span> 28/01/2024</span>
-                  <span>12:45</span>
-                </div>
               </div>
-              <div className="mx-11 rounded-lg"><span className="text-xs">Ipsum necessitatibus commodi excepturi sequi quos pariatur incidunt, ipsa optio soluta, inventore in error id odio doloremque perspiciatis. Totam ipsam ratione dolorum.</span></div>
-            </div>
             </div>
           </div>
         </section>
@@ -358,7 +426,5 @@ const App = () => {
     </section>
   );
 };
-
-
 
 export default App;
