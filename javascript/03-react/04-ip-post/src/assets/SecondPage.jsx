@@ -1,26 +1,27 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const SecondPage = () => {
+  const params = useParams();
+  // console.log(params);
+
   const [post, setPost] = useState([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const fetchedPosts = await fetch(`https://dummyjson.com/posts/${1}`);
-      const postJson = await fetchedPosts.json();
-      setPost(postJson.posts);
-      console.log(postJson.posts);
+      const fetchedPosts = await fetch(
+        `https://dummyjson.com/posts/${params.id}`
+      );
+      const json = await fetchedPosts.json();
+      console.log(json);
+      setPost(json);
     };
     fetchPosts();
-  }, []);
+  }, [params.id]);
   console.log(post);
-
-  
-
   return (
     <div>
-      <div
-        className="flex items-center justify-center h-screen m-2"
-      >
+      <div className="flex items-center justify-center h-screen m-2">
         <div className="bg-white text-black p-4 rounded-lg">
           <div className="max-w-screen-md">
             <div className="flex items-center mb-4 text-orange-500">
@@ -93,7 +94,7 @@ const SecondPage = () => {
                     Title
                   </span>
                   <span className="text-sm font-semibold text-gray-500">|</span>
-                  <span className="text-sm font-medium text-gray-400">
+                  <span className="text-base font-medium text-gray-500">
                     #{post.id} - {post.title}
                   </span>
                 </div>
@@ -104,6 +105,7 @@ const SecondPage = () => {
                 className="flex items-center shadow-lg bg-orange-400 gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-white uppercase rounded-lg hover:bg-orange-500"
                 type="button"
               >
+      
                 <a className="text-black">Back Home</a>
                 <span className="text-black animate-bounce">
                   {" "}
