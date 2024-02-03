@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -34,7 +35,7 @@ const App = () => {
             className="flex items-center shadow-lg bg-orange-400 gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-white uppercase rounded-lg hover:bg-orange-500"
             type="button"
           >
-           <a className="text-black">Learn More</a>
+           <Link to={`/post/${post.id}`}>Learn More</Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
