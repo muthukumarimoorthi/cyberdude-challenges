@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const SecondPage = () => {
   const params = useParams();
@@ -106,7 +106,7 @@ const SecondPage = () => {
                 type="button"
               >
       
-                <a className="text-black">Back Home</a>
+                <Link to={"/"} className="text-black">Back Home</Link>
                 <span className="text-black animate-bounce">
                   {" "}
                   <svg

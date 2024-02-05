@@ -9,7 +9,6 @@ const App = () => {
       const fetchedPosts = await fetch("https://dummyjson.com/posts");
       const postJson = await fetchedPosts.json();
       setPosts(postJson.posts);
-      console.log(postJson);
     };
     fetchPosts();
   }, []);
@@ -50,7 +49,7 @@ const App = () => {
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     strokeWidth="2"
-                    className="w-4 h-4 text-black"
+                    className="w-4 h-4 text-black animate-bounce"
                   >
                     <path
                       strokeLinecap="round"
