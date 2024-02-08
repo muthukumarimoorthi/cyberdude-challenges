@@ -8,6 +8,7 @@ const InputComponent = ({
   type,
   placeholder,
   label,
+  required
 }) => {
   return (
     <div>
@@ -20,7 +21,8 @@ const InputComponent = ({
             placeholder={placeholder}
             value={value}
             onChange={handleOnChange}
-            className="outline-none rounded-lg px-3 py-2 border-2 border-gray-200 focus:border-2 focus:border-blue-400 shadow w-full" required
+            className="outline-none rounded-lg px-3 py-2 border-2 border-gray-200 focus:border-2 focus:border-blue-400 shadow w-full"
+            required={required}
           />
         </div>
     </div>

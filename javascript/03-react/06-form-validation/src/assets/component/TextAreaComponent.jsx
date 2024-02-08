@@ -1,3 +1,5 @@
+import PropType from "prop-types"
+
 const TextAreaComponent = ({id, rows, placeholder, label }) => {
   return (
     <div className="flex flex-col space-y-2">
@@ -15,5 +17,12 @@ const TextAreaComponent = ({id, rows, placeholder, label }) => {
     </div>
   );
 };
+
+TextAreaComponent.prototype = {
+  label: PropType.string,
+  id: PropType.string,
+  rows: PropType.number,
+  placeholder: PropType.string,
+}
 
 export default TextAreaComponent;
