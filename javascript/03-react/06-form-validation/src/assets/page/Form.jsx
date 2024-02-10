@@ -26,7 +26,7 @@ const Form = () => {
       if (value.length < 4) {
         setError((prevValue) => ({
           ...prevValue,
-          userName: "Username value failed",
+          userName: "Username should be 3 letters",
         }));
       } else {
         setError((prevValue) => ({
@@ -45,8 +45,9 @@ const Form = () => {
   const submitForm = (e) => {
     e.preventDefault();
     alert(`${form.userName} your form submited`);
+    
   };
-
+  
   
 
   return (
@@ -85,7 +86,7 @@ const Form = () => {
             required
           />
           {error.userName ? (
-            <small className="bg-red-500 px-2 rounded w-fit text-white">
+            <small className="px-2 rounded w-fit text-red-500">
               {error.userName}
             </small>
           ) : (
