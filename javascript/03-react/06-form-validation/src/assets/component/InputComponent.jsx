@@ -7,6 +7,7 @@ const InputComponent = ({
   value,
   type,
   placeholder,
+  register,
   label,
   required
 }) => {

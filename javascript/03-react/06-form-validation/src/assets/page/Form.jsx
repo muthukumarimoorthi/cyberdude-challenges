@@ -19,10 +19,25 @@ const Form = () => {
         <input
           type="text"
           name="fullName"
-          className={`px-4 py-2 bg-gray-200 outline-none w-full rounded ${errors.fullName ? "border-2 border-red-500":"border-none"}`}
+          className={`px-4 py-2 bg-gray-200 outline-none w-full rounded ${
+            errors.fullName ? "border-2 border-red-500" : "border-none"
+          }`}
           placeholder="Full Name"
-          {...register("fullName", { required: true })}
-        />{errors.fullName && <small className="text-red-500">This field is required</small>}
+          {...register("fullName", {
+            required: "This field is required",
+            minLength: {
+              value: 3,
+              message: "This field should have atleast 3 characters",
+            },
+            maxLength: {
+              value: 25,
+              message: "You are alien!",
+            },
+          })}
+        />
+        {errors.fullName && (
+          <small className="text-red-500">{errors.fullName.message}</small>
+        )}
         <input
           type="text"
           name="subject"
