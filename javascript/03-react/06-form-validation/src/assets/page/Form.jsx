@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+import InputComponent from "../component/InputComponent";
+
 
 const Form = () => {
   const {
@@ -6,17 +8,24 @@ const Form = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  console.log(useForm());
 
   const info = (data) => {
     console.log(data);
   };
 
   return (
-    <div className="m-10 bg-white p-10 rounded">
-      <h1>Contact Page!</h1>
-      <form className="my-4 space-y-4" onSubmit={handleSubmit(info)}>
-        <input
+    <div>
+      <div className="m-10 bg-white p-10 rounded">
+        <h1>Contact Page!</h1>
+        <form className="my-4 space-y-4" onSubmit={handleSubmit(info)}>
+          <InputComponent
+            label={"Name"}
+            name={"fullName"}
+            placeholder={"Enter your fullname"}
+            register={register("fullName")}
+          />
+
+          {/* <input
           type="text"
           name="fullName"
           className={`px-4 py-2 bg-gray-200 outline-none w-full rounded ${
@@ -54,10 +63,14 @@ const Form = () => {
         ></textarea>
         <button className="px-4 py-2 w-full bg-slate-800 text-white rounded font-semibold">
           Submit
-        </button>
-      </form>
+        </button> */}
+        </form>
+      </div>
     </div>
   );
 };
 
 export default Form;
+
+
+
