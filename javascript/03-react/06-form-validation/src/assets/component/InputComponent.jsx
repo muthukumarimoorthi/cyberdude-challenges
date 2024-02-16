@@ -1,22 +1,23 @@
 import PropTypes from "prop-types";
+import { useForm } from "react-hook-form";
 
 const InputComponent = ({
   id,
   name,
-  handleOnChange,
-  error,
   type = "text",
   placeholder,
   register,
+  error,
   label,
   required,
 }) => {
+  // console.log(error);
   return (
     <div>
       <div className="flex flex-col space-y-2">
-        <label htmlFor={id} className="font-semibold text-gray-800">
-          {label}
-          {required ? <span className="text-red-500">*</span>:""}
+        <label htmlFor={name} className="font-semibold text-gray-800">
+          {label} 
+          {required ? <span className="text-red-500"> *</span>:""}
         </label>
         <input
           type={type}
@@ -28,6 +29,7 @@ const InputComponent = ({
           required={required}
         />{error && <small className="text-red-500">{error.message}</small>}
       </div>
+
     </div>
   );
 };
@@ -41,7 +43,8 @@ InputComponent.propTypes = {
   type: PropTypes.string,
   onChange: PropTypes.func,
   required: PropTypes.bool,
-  register: PropTypes.object
+  register: PropTypes.object,
+  error: PropTypes.object,
 };
 
 export default InputComponent;
