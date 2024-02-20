@@ -1,0 +1,14 @@
+{
+  "name": "01-creating-file-system",
+  "version": "1.0.0",
+  "description": "App using NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJS"
+  ],
+  "author": "Muthukumari",
+  "license": "MIT"
+}

@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "location": "Chennai",
+        "myFavouritePlaces": [
+            {
+                "placeName": "Marina Beach",
+                "about": "This expansive beach is Chennai's most famous tourist attraction, though the undercurrent is too strong for all but the strongest swimmers. Look out for the 'Kannagi' statue on Marina Beach, which tells the story of the legendary character from a South Indian epic."
+            },
+            {
+                "placeName": "Besant Nagar Beach",
+                "about": "My love for beach always lands me in besant nagar beach it's amazing and wonderful place,I love this place."
+            }
+        ] 
+    },
+    {
+        "id": 2,
+        "location": "Karaikudi",
+        "myFavouritePlaces": [
+            {
+                "placeName":"Kundrakkudi",
+                "about": "Kundarakudi temple was a very surprise element in my trip which you got added at the last moment. This temple is located on a big rock. what is interesting is that every steps has a footmark carved on it and some large steps of carvings of her entire human body. It is easy to climb the temple, hardly takes 5 to 10 minutes. below the rock there are caves with beautiful carvings and paintings in natural colors. It is a protected monument visited by very few people but it is definitely a must see when visiting kundrakudi."
+            }
+        ]
+    }
+
+]
+ 
